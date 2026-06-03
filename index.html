@@ -2,13 +2,7 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-  <meta property="og:title" content="🏝 濟州島5天4夜自駕行程">
-  <meta property="og:description" content="6/23-6/27 | 城山日出峰・涉地可支・萬丈窟・挾才海灘 | 含每日雨備方案 | Google Maps + Naver Map">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=600&q=80">
-  <meta property="og:url" content="https://kai3kai2.github.io/jeju-trip-2025/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>🏝 濟州島 5天4夜行程</title>
 <style>
 :root {
@@ -191,6 +185,66 @@ body {
   font-size: 11.5px; color: var(--grey);
   background: var(--white); border-top: 1px solid #e0e8e6;
 }
+
+/* ── FLIGHT PAGES ── */
+.flight-card {
+  border-radius: 14px; padding: 16px 14px;
+  margin: 4px 0; box-shadow: 0 3px 14px rgba(0,0,0,.10);
+}
+.flight-card.outbound { background: linear-gradient(135deg,#1a3a6e 0%,#2b5ba8 100%); color:white; }
+.flight-card.return   { background: linear-gradient(135deg,#1a4f6e 0%,#2b7ba8 100%); color:white; }
+.flight-airline { font-size: 12px; opacity:.85; margin-bottom:14px; font-weight:600; letter-spacing:.5px; }
+.flight-route {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.flight-city { text-align: center; }
+.flight-code { font-size: 26px; font-weight: 900; letter-spacing:1px; }
+.flight-name { font-size: 10px; opacity:.8; margin-top:2px; }
+.flight-time { font-size: 20px; font-weight: 700; margin-top:6px; }
+.flight-arrow {
+  flex:1; display:flex; flex-direction:column;
+  align-items:center; gap:2px; font-size:18px;
+}
+.flight-line { width:100%; height:1.5px; background:rgba(255,255,255,.4); }
+.flight-dur  { font-size:10px; opacity:.75; margin-top:2px; }
+
+/* ── CHECKLIST ── */
+.checklist-card {
+  background:#F0F7FF; border:1.5px solid #B8D4F0;
+  border-radius:10px; padding:10px 12px;
+  display:flex; flex-direction:column; gap:6px; margin:2px 0;
+}
+.check-item { display:flex; gap:10px; font-size:13px; color:#1a1a2e; align-items:flex-start; }
+.check-box  { font-size:16px; color:#2b5ba8; flex-shrink:0; }
+
+/* ── TIMELINE ── */
+.timeline-card {
+  background:var(--white); border:1.5px solid #dde8f0;
+  border-radius:10px; overflow:hidden; margin:2px 0;
+}
+.tl-item {
+  display:flex; align-items:flex-start; gap:12px;
+  padding:9px 14px; border-bottom:.5px solid #eef4f8;
+}
+.tl-item:last-child { border-bottom:none; }
+.tl-time {
+  font-size:12px; font-weight:700; color:#2b5ba8;
+  min-width:38px; padding-top:1px;
+}
+.tl-text  { font-size:13px; color:var(--dark); }
+.tl-fly   { background:linear-gradient(90deg,#e8f2ff,#f0f8ff); }
+.tl-fly .tl-time  { color:#1a3a6e; }
+.tl-fly .tl-text  { font-weight:700; color:#1a3a6e; }
+
+/* ── FAREWELL ── */
+.farewell-card {
+  background:linear-gradient(135deg,#e8f4f2,#f0faf8);
+  border:1.5px solid #c0e0d8; border-radius:12px;
+  padding:16px; text-align:center; margin:4px 0;
+}
+.farewell-emoji { font-size:36px; margin-bottom:10px; }
+.farewell-text  { font-size:13.5px; color:#1a4a3a; line-height:1.8; }
+
 </style>
 </head>
 <body>
@@ -207,11 +261,78 @@ body {
 </div>
 
 <nav class="nav-wrap">
-  <button class="tab" onclick="showDay(1)" id="tab1"><span class="tab-day">Day1</span><span class="tab-date">6/23</span><span class="tab-label">抵達</span></button><button class="tab" onclick="showDay(2)" id="tab2"><span class="tab-day">Day2</span><span class="tab-date">6/24</span><span class="tab-label">城山</span></button><button class="tab" onclick="showDay(3)" id="tab3"><span class="tab-day">Day3</span><span class="tab-date">6/25</span><span class="tab-label">咸德</span></button><button class="tab" onclick="showDay(4)" id="tab4"><span class="tab-day">Day4</span><span class="tab-date">6/26</span><span class="tab-label">挾才</span></button><button class="tab" onclick="showDay(5)" id="tab5"><span class="tab-day">Day5</span><span class="tab-date">6/27</span><span class="tab-label">返台</span></button><button class="tab" onclick="showDay(0)" id="tab0"><span class="tab-day">➕</span><span class="tab-date">推薦</span><span class="tab-label">加選</span></button>
+  <button class="tab" onclick="showDay(-1)" id="tab-1"><span class="tab-day" style="color:#2b5ba8">去程</span><span class="tab-date">6/23</span><span class="tab-label">出發</span></button><button class="tab" onclick="showDay(1)" id="tab1"><span class="tab-day">Day1</span><span class="tab-date">6/23</span><span class="tab-label">抵達</span></button><button class="tab" onclick="showDay(2)" id="tab2"><span class="tab-day">Day2</span><span class="tab-date">6/24</span><span class="tab-label">城山</span></button><button class="tab" onclick="showDay(3)" id="tab3"><span class="tab-day">Day3</span><span class="tab-date">6/25</span><span class="tab-label">咸德</span></button><button class="tab" onclick="showDay(4)" id="tab4"><span class="tab-day">Day4</span><span class="tab-date">6/26</span><span class="tab-label">挾才</span></button><button class="tab" onclick="showDay(5)" id="tab5"><span class="tab-day">Day5</span><span class="tab-date">6/27</span><span class="tab-label">返台</span></button><button class="tab" onclick="showDay(6)" id="tab6"><span class="tab-day" style="color:#2b5ba8">回程</span><span class="tab-date">6/27</span><span class="tab-label">返台</span></button><button class="tab" onclick="showDay(0)" id="tab0"><span class="tab-day">➕</span><span class="tab-date">推薦</span><span class="tab-label">加選</span></button>
 </nav>
 
 <main>
   
+
+<section class="day-section" id="day-1">
+  <div class="day-header" style="background:linear-gradient(90deg,#1a3a6e,#2b5ba8)">
+    <span class="day-num">✈️</span>
+    <div>
+      <div class="day-date">6/23（一）去程</div>
+      <div class="day-theme">虎航 IT278　桃園 → 濟州</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="flight-card outbound">
+      <div class="flight-airline">🛫 虎航 Tigerair IT278</div>
+      <div class="flight-route">
+        <div class="flight-city">
+          <div class="flight-code">TPE</div>
+          <div class="flight-name">桃園國際機場</div>
+          <div class="flight-time">06:40</div>
+        </div>
+        <div class="flight-arrow">
+          <div class="flight-line"></div>
+          <span>✈</span>
+          <div class="flight-line"></div>
+          <div class="flight-dur">約 1h 55m</div>
+        </div>
+        <div class="flight-city">
+          <div class="flight-code">CJU</div>
+          <div class="flight-name">濟州國際機場</div>
+          <div class="flight-time">09:35</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg-label">⏰ 出發前提醒</div>
+    <div class="ib"><span class="ib-icon">⏰</span>桃園機場建議 <strong>04:30</strong> 前抵達（T2 出境），T2 人工報到櫃台</div>
+    <div class="ib"><span class="ib-icon">🧳</span>虎航隨身行李：7kg，托運行李需額外付費，請提前網路加購</div>
+    <div class="ib"><span class="ib-icon">💴</span>建議換好韓元現金（至少 10-15 萬韓元），機場匯率差，可在台灣先換</div>
+    <div class="ib"><span class="ib-icon">📱</span>出發前安裝：<strong>Naver Map</strong>（導航）、<strong>Papago</strong>（翻譯）、<strong>Kakao T</strong>（計程車）</div>
+    <div class="ib"><span class="ib-icon">🌐</span>韓國網路：建議買 eSIM 或台灣漫遊，抵達後即可使用導航</div>
+
+    <div class="seg-label">🚗 抵達後流程</div>
+    <div class="checklist-card">
+      <div class="check-item"><span class="check-box">□</span>09:35 落地 → 提領行李（約20分鐘）</div>
+      <div class="check-item"><span class="check-box">□</span>開啟 Naver Map / SIM 卡 / eSIM 確認網路</div>
+      <div class="check-item"><span class="check-box">□</span>入境大廳1F → 樂天租車接待處 取車</div>
+      <div class="check-item"><span class="check-box">□</span>確認保險方案、油種（柴油 경유 Diesel）、車況拍照存證</div>
+      <div class="check-item"><span class="check-box">□</span>設定 Naver Map 導航前往 EGG DROP 吃早餐 🍳</div>
+    </div>
+
+    <div class="seg-label">📋 行李清單提醒</div>
+    <div class="ib"><span class="ib-icon">☑</span>護照（有效期6個月以上）、機票 QR Code</div>
+    <div class="ib"><span class="ib-icon">☑</span>韓元現金、信用卡（Visa/Master）</div>
+    <div class="ib"><span class="ib-icon">☑</span>國際駕照 + 台灣駕照（租車必備，兩本都要帶）</div>
+    <div class="ib"><span class="ib-icon">☑</span>防曬乳、薄外套（6月濟州日曬強，萬丈窟11°C需薄外套）</div>
+    <div class="ib"><span class="ib-icon">☑</span>充電線、轉接頭（韓國插座 Type A，與台灣相同可直插）</div>
+    <div class="ib"><span class="ib-icon">☑</span>樂天租車預訂確認書（電子版即可）</div>
+    <div class="ib"><span class="ib-icon">☑</span>住宿訂房確認信（西歸浦 + 樂天城市酒店）</div>
+
+    <div class="seg-label">💡 實用資訊</div>
+    <div class="ib"><span class="ib-icon">💰</span>濟州島免簽 30 天（中華民國護照），免填入境卡</div>
+    <div class="ib"><span class="ib-icon">🅿</span>景點停車費約 1,000-3,000 韓元/次，準備零錢或信用卡</div>
+    <div class="ib"><span class="ib-icon">⛽</span>加油：셀프주유소（自助加油），柴油=경유，記得加滿再還車</div>
+    <div class="ib"><span class="ib-icon">🆘</span>緊急聯絡：韓國報警 112，救護車 119，台灣外館 +82-2-399-2767</div>
+
+  </div>
+</section>
+
 <section class="day-section" id="day1">
   <div class="day-header">
     <span class="day-num">Day 1</span>
@@ -648,7 +769,84 @@ body {
 </div>
     
   </div>
-</section><section class="day-section" id="day0" style="display:none"><div class="day-header" style="background:linear-gradient(90deg,#E8604C,#cc4433)"><span class="day-num">✦</span><div><div class="day-date">額外推薦</div><div class="day-theme">可選加入行程的景點、美食、購物</div></div></div><div class="day-body"><div class="extra-cat">🏝 景點推薦</div>
+</section>
+
+<section class="day-section" id="day6">
+  <div class="day-header" style="background:linear-gradient(90deg,#1a3a6e,#2b5ba8)">
+    <span class="day-num">✈️</span>
+    <div>
+      <div class="day-date">6/27（五）回程</div>
+      <div class="day-theme">虎航 IT279　濟州 → 桃園</div>
+    </div>
+  </div>
+  <div class="day-body">
+
+    <div class="flight-card return">
+      <div class="flight-airline">🛬 虎航 Tigerair IT279</div>
+      <div class="flight-route">
+        <div class="flight-city">
+          <div class="flight-code">CJU</div>
+          <div class="flight-name">濟州國際機場</div>
+          <div class="flight-time">10:30</div>
+        </div>
+        <div class="flight-arrow">
+          <div class="flight-line"></div>
+          <span>✈</span>
+          <div class="flight-line"></div>
+          <div class="flight-dur">約 1h 5m</div>
+        </div>
+        <div class="flight-city">
+          <div class="flight-code">TPE</div>
+          <div class="flight-name">桃園國際機場</div>
+          <div class="flight-time">11:35</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="seg-label">⏰ 回程當天時間表</div>
+    <div class="timeline-card">
+      <div class="tl-item"><div class="tl-time">07:00</div><div class="tl-text">起床、整理行李、退房準備</div></div>
+      <div class="tl-item"><div class="tl-time">07:30</div><div class="tl-text">樂天城市酒店 辦理退房（Check-out）</div></div>
+      <div class="tl-item"><div class="tl-time">07:45</div><div class="tl-text">搭樂天酒店免費接駁車 → 濟州機場（約15分鐘）</div></div>
+      <div class="tl-item"><div class="tl-time">08:30</div><div class="tl-text">抵達機場 → 辦理報到（Check-in）、托運行李</div></div>
+      <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-text">通關安檢 → 前往候機室</div></div>
+      <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-text">候機室內逛免稅商店、吃個早餐</div></div>
+      <div class="tl-item tl-fly"><div class="tl-time">10:30</div><div class="tl-text">✈️ IT279 起飛！</div></div>
+      <div class="tl-item"><div class="tl-time">11:35</div><div class="tl-text">桃園 T2 落地 → 提領行李 → 到家 🏠</div></div>
+    </div>
+
+    <div class="seg-label">🛍 最後採買清單</div>
+    <div class="ib"><span class="ib-icon">🍊</span>漢拏峰橘子大福（매일유업）― 東門市場或機場免稅店</div>
+    <div class="ib"><span class="ib-icon">🍫</span>濟州柑橘巧克力 / 橘子餅乾 ― 東門市場必買伴手禮</div>
+    <div class="ib"><span class="ib-icon">🌿</span>濟州海苔（재래김）― 真空包裝，適合帶回</div>
+    <div class="ib"><span class="ib-icon">🧴</span>韓國保養品 ― Olive Young 蓮洞店最後補貨</div>
+    <div class="ib"><span class="ib-icon">🥃</span>漢拏山燒酒（한라산 소주）― 濟州限定，超市或便利商店有售</div>
+    <div class="ib"><span class="ib-icon">⚠️</span>液體/乳霜超 100ml 需托運，機場液體規定請留意</div>
+
+    <div class="seg-label">📦 行李注意事項</div>
+    <div class="checklist-card">
+      <div class="check-item"><span class="check-box">□</span>租車已於 6/26 晚歸還，確認無遺忘物品</div>
+      <div class="check-item"><span class="check-box">□</span>韓元現金花完，多餘韓元可在機場換回或留著下次用</div>
+      <div class="check-item"><span class="check-box">□</span>生鮮食品（水果、肉類、蔬菜）不可攜帶入台</div>
+      <div class="check-item"><span class="check-box">□</span>泡菜密封完整可帶（建議真空包裝）</div>
+      <div class="check-item"><span class="check-box">□</span>機場免稅店提貨（如有預購）</div>
+    </div>
+
+    <div class="seg-label">🎉 旅程結語</div>
+    <div class="farewell-card">
+      <div class="farewell-emoji">🏝</div>
+      <div class="farewell-text">
+        感謝濟州島的美好時光！<br>
+        城山日出峰的日出、涉地可支的海風、<br>
+        萬丈窟的神秘、挾才海灘的碧藍⋯<br>
+        <strong>旅途平安，回家後好好休息！✨</strong>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="day-section" id="day0"><div class="day-header" style="background:linear-gradient(90deg,#E8604C,#cc4433)"><span class="day-num">✦</span><div><div class="day-date">額外推薦</div><div class="day-theme">可選加入行程的景點、美食、購物</div></div></div><div class="day-body"><div class="extra-cat">🏝 景點推薦</div>
 
 <div class="extra-card">
   <div class="extra-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Udo_Island_Jeju.jpg/800px-Udo_Island_Jeju.jpg" alt="牛島 우도" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
@@ -769,10 +967,11 @@ body {
 
 <script>
 function showDay(n) {
+  const key = n === -1 ? '-1' : String(n);
   document.querySelectorAll('.day-section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  const sec = document.getElementById('day' + n);
-  const tab = document.getElementById('tab' + n);
+  const sec = document.getElementById('day' + key);
+  const tab = document.getElementById('tab' + key);
   if (sec) sec.classList.add('active');
   if (tab) {
     tab.classList.add('active');
