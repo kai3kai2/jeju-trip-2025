@@ -2,256 +2,63 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>🏝 濟州島 5天4夜行程</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta property="og:title" content="🏝 濟州島5天4夜自駕行程">
+<meta property="og:description" content="6/23-6/27 | 城山日出峰・涉地可支・萬丈窟・挾才海灘 | 含每日雨備方案">
+<meta property="og:image" content="https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=600&q=80">
+<meta property="og:url" content="https://kai3kai2.github.io/jeju-trip-2025/">
+<title>🏝 濟州島5天4夜行程</title>
 <style>
-:root {
-  --teal: #2C7873;
-  --teal-l: #E8F4F2;
-  --coral: #E8604C;
-  --gold: #F5A623;
-  --gold-l: #FEF4E3;
-  --rain: #4A7FA5;
-  --rain-l: #E6F0F8;
-  --dark: #1a1a2e;
-  --grey: #888;
-  --lgrey: #F7F8FA;
-  --white: #fff;
-  --radius: 12px;
-  --shadow: 0 2px 12px rgba(0,0,0,0.09);
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-  background: #F0F4F3;
-  color: var(--dark);
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 480px;
-  margin: 0 auto;
-  padding-bottom: 80px;
-}
-
-/* ── HERO ── */
-.hero {
-  background: linear-gradient(145deg, var(--teal) 0%, #1a5f5a 55%, #0d3d38 100%);
-  padding: 24px 18px 20px;
-  color: white;
-}
-.hero h1 { font-size: 22px; font-weight: 800; letter-spacing: .5px; margin-bottom: 6px; }
-.hero-sub { font-size: 12px; opacity: .85; line-height: 1.7; }
-.info-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 8px; margin-top: 14px;
-}
-.info-chip {
-  background: rgba(255,255,255,.15); border-radius: 8px;
-  padding: 8px 10px; font-size: 11.5px;
-}
-.info-chip strong { display: block; font-size: 10px; opacity: .8; margin-bottom: 2px; }
-
-/* ── STICKY NAV ── */
-.nav-wrap {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--white);
-  box-shadow: 0 2px 8px rgba(0,0,0,.12);
-  display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-.nav-wrap::-webkit-scrollbar { display: none; }
-.tab {
-  flex: 0 0 auto; border: none; background: transparent;
-  padding: 10px 14px; cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; gap: 1px;
-  scroll-snap-align: start; transition: background .2s;
-  border-bottom: 3px solid transparent;
-  min-width: 64px;
-}
-.tab.active { border-bottom-color: var(--teal); background: var(--teal-l); }
-.tab-day { font-size: 11px; font-weight: 700; color: var(--teal); }
-.tab-date { font-size: 10px; color: var(--grey); }
-.tab-label { font-size: 11px; color: var(--dark); font-weight: 600; }
-
-/* ── DAY SECTION ── */
-.day-section { display: none; }
-.day-section.active { display: block; }
-.day-header {
-  background: linear-gradient(90deg, var(--teal) 0%, #3d9189 100%);
-  color: white; padding: 14px 16px;
-  display: flex; align-items: center; gap: 12px;
-}
-.day-num {
-  font-size: 22px; font-weight: 900;
-  background: rgba(255,255,255,.2); border-radius: 8px;
-  padding: 4px 12px; white-space: nowrap;
-}
-.day-date { font-size: 14px; font-weight: 700; }
-.day-theme { font-size: 11px; opacity: .9; margin-top: 2px; }
-.day-body { padding: 14px 12px; display: flex; flex-direction: column; gap: 6px; }
-
-/* ── SEGMENT LABEL ── */
-.seg-label {
-  display: inline-flex; align-items: center;
-  background: var(--coral); color: white;
-  font-size: 12px; font-weight: 700;
-  padding: 5px 12px; border-radius: 20px;
-  margin-top: 6px; align-self: flex-start;
-}
-.seg-rain {
-  display: inline-flex; align-items: center;
-  background: var(--rain); color: white;
-  font-size: 12px; font-weight: 700;
-  padding: 5px 12px; border-radius: 20px;
-  margin-top: 4px; align-self: flex-start;
-}
-
-/* ── INFO BULLET ── */
-.ib {
-  display: flex; gap: 8px; align-items: flex-start;
-  padding: 4px 6px; font-size: 13px; color: #444;
-}
-.ib-icon { color: var(--teal); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-
-/* ── CARDS ── */
-.card-spot, .card-food, .card-rain {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  margin: 2px 0;
-}
-.card-spot { border: 1.5px solid #dde8e7; background: var(--white); }
-.card-food { border: 1.5px solid #f0c070; background: var(--gold-l); }
-.card-rain { border: 1.5px solid #a8c8e0; background: var(--rain-l); }
-.card-img-wrap img { display: block; width: 100%; }
-.card-body { padding: 10px 12px; }
-.card-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--dark); }
-.card-addr { font-size: 11.5px; color: var(--grey); margin-bottom: 6px; }
-.card-links { display: flex; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
-.btn-map {
-  display: inline-flex; align-items: center; gap: 4px;
-  background: var(--teal); color: white !important;
-  padding: 5px 12px; border-radius: 6px;
-  font-size: 12px; font-weight: 600; text-decoration: none;
-}
-.btn-naver {
-  display: inline-flex; align-items: center; gap: 4px;
-  background: #03c75a; color: white !important;
-  padding: 5px 12px; border-radius: 6px;
-  font-size: 12px; font-weight: 600; text-decoration: none;
-}
-.card-note {
-  font-size: 12px; color: #555; line-height: 1.5;
-  padding-left: 8px; border-left: 2px solid var(--teal);
-  margin-top: 4px;
-}
-.card-food .card-note { border-left-color: var(--gold); }
-.card-rain .card-note { border-left-color: var(--rain); }
-
-/* ── RAIN BOX ── */
-.rain-box {
-  background: linear-gradient(135deg, #e8f2fa 0%, #f0f7ff 100%);
-  border: 1.5px dashed var(--rain); border-radius: var(--radius);
-  padding: 12px; margin-top: 8px;
-  display: flex; flex-direction: column; gap: 6px;
-}
-.rain-title {
-  font-size: 13px; font-weight: 700; color: var(--rain);
-  margin-bottom: 4px;
-}
-
-/* ── EXTRA CARDS ── */
-.extra-cat {
-  font-size: 13px; font-weight: 800; color: var(--teal);
-  padding: 8px 4px 4px; margin-top: 4px;
-  border-bottom: 2px solid var(--teal-l);
-}
-.extra-card {
-  display: flex; gap: 0; border-radius: var(--radius);
-  overflow: hidden; box-shadow: var(--shadow);
-  border: 1px solid #dde; margin: 4px 0;
-  background: var(--white);
-}
-.extra-img { width: 110px; min-width: 110px; flex-shrink: 0; }
-.extra-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.extra-body { flex: 1; padding: 9px 10px; min-width: 0; }
-.extra-name { font-size: 13px; font-weight: 700; margin-bottom: 3px; color: var(--dark); }
-.extra-addr { font-size: 11px; color: var(--grey); margin-bottom: 4px; }
-.extra-links { display: flex; gap: 6px; margin-bottom: 5px; flex-wrap: wrap; }
-.extra-desc { font-size: 11.5px; color: #555; line-height: 1.4; }
-
-/* ── FOOTER ── */
-.footer {
-  text-align: center; padding: 20px 16px;
-  font-size: 11.5px; color: var(--grey);
-  background: var(--white); border-top: 1px solid #e0e8e6;
-}
-
-/* ── FLIGHT PAGES ── */
-.flight-card {
-  border-radius: 14px; padding: 16px 14px;
-  margin: 4px 0; box-shadow: 0 3px 14px rgba(0,0,0,.10);
-}
-.flight-card.outbound { background: linear-gradient(135deg,#1a3a6e 0%,#2b5ba8 100%); color:white; }
-.flight-card.return   { background: linear-gradient(135deg,#1a4f6e 0%,#2b7ba8 100%); color:white; }
-.flight-airline { font-size: 12px; opacity:.85; margin-bottom:14px; font-weight:600; letter-spacing:.5px; }
-.flight-route {
-  display: flex; align-items: center; justify-content: space-between; gap: 8px;
-}
-.flight-city { text-align: center; }
-.flight-code { font-size: 26px; font-weight: 900; letter-spacing:1px; }
-.flight-name { font-size: 10px; opacity:.8; margin-top:2px; }
-.flight-time { font-size: 20px; font-weight: 700; margin-top:6px; }
-.flight-arrow {
-  flex:1; display:flex; flex-direction:column;
-  align-items:center; gap:2px; font-size:18px;
-}
-.flight-line { width:100%; height:1.5px; background:rgba(255,255,255,.4); }
-.flight-dur  { font-size:10px; opacity:.75; margin-top:2px; }
-
-/* ── CHECKLIST ── */
-.checklist-card {
-  background:#F0F7FF; border:1.5px solid #B8D4F0;
-  border-radius:10px; padding:10px 12px;
-  display:flex; flex-direction:column; gap:6px; margin:2px 0;
-}
-.check-item { display:flex; gap:10px; font-size:13px; color:#1a1a2e; align-items:flex-start; }
-.check-box  { font-size:16px; color:#2b5ba8; flex-shrink:0; }
-
-/* ── TIMELINE ── */
-.timeline-card {
-  background:var(--white); border:1.5px solid #dde8f0;
-  border-radius:10px; overflow:hidden; margin:2px 0;
-}
-.tl-item {
-  display:flex; align-items:flex-start; gap:12px;
-  padding:9px 14px; border-bottom:.5px solid #eef4f8;
-}
-.tl-item:last-child { border-bottom:none; }
-.tl-time {
-  font-size:12px; font-weight:700; color:#2b5ba8;
-  min-width:38px; padding-top:1px;
-}
-.tl-text  { font-size:13px; color:var(--dark); }
-.tl-fly   { background:linear-gradient(90deg,#e8f2ff,#f0f8ff); }
-.tl-fly .tl-time  { color:#1a3a6e; }
-.tl-fly .tl-text  { font-weight:700; color:#1a3a6e; }
-
-/* ── FAREWELL ── */
-.farewell-card {
-  background:linear-gradient(135deg,#e8f4f2,#f0faf8);
-  border:1.5px solid #c0e0d8; border-radius:12px;
-  padding:16px; text-align:center; margin:4px 0;
-}
-.farewell-emoji { font-size:36px; margin-bottom:10px; }
-.farewell-text  { font-size:13.5px; color:#1a4a3a; line-height:1.8; }
-
+:root{--t:#2C7873;--tl:#E8F4F2;--c:#E8604C;--g:#F5A623;--gl:#FEF4E3;--r:#4A7FA5;--rl:#E6F0F8;--dk:#1a1a2e;--gy:#888;--lg:#F7F8FA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"Noto Sans TC","PingFang TC",sans-serif;background:#F0F4F3;color:var(--dk);font-size:14px;line-height:1.6;max-width:480px;margin:0 auto;padding-bottom:80px}
+/* HERO */
+.hero{background:linear-gradient(145deg,#2C7873 0%,#1a5f5a 55%,#0d3d38 100%);padding:22px 18px 18px;color:white}
+.hero h1{font-size:21px;font-weight:800;letter-spacing:.5px;margin-bottom:5px}
+.hero-sub{font-size:11.5px;opacity:.85;line-height:1.7}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px}
+.info-chip{background:rgba(255,255,255,.15);border-radius:7px;padding:7px 9px;font-size:11px}
+.info-chip strong{display:block;font-size:9.5px;opacity:.8;margin-bottom:1px}
+/* NAV */
+.nav-wrap{position:sticky;top:0;z-index:100;background:white;box-shadow:0 2px 8px rgba(0,0,0,.12);display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nav-wrap::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:none;background:transparent;padding:9px 12px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;min-width:58px;border-bottom:3px solid transparent;transition:background .2s}
+.tab.active{border-bottom-color:var(--t);background:var(--tl)}
+/* DAY SECTION */
+.ds{display:none}
+.ds.active{display:block}
+.dh{color:white;padding:13px 15px;display:flex;align-items:center;gap:11px}
+.dn{font-size:20px;font-weight:900;background:rgba(255,255,255,.18);border-radius:7px;padding:3px 10px;white-space:nowrap}
+.dd{font-size:13.5px;font-weight:700}
+.dt{font-size:10.5px;opacity:.9;margin-top:1px}
+.db{padding:13px 12px;display:flex;flex-direction:column;gap:6px}
+/* SEGMENT LABEL */
+.sl{display:inline-flex;align-items:center;color:white;font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;margin-top:5px;align-self:flex-start}
+/* INFO BULLET */
+.ib{display:flex;gap:8px;align-items:flex-start;padding:3px 5px;font-size:13px;color:#444}
+/* CARDS */
+.card-spot,.card-food,.card-rain{border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);margin:2px 0}
+.card-spot{border:1.5px solid #dde8e7;background:white}
+.card-food{border:1.5px solid #f0c070;background:#FEF4E3}
+.card-rain{border:1.5px solid #a8c8e0;background:#E6F0F8}
+.cb{padding:9px 12px}
+.cn{font-size:14px;font-weight:700;margin-bottom:3px}
+.ca{font-size:11.5px;color:var(--gy);margin-bottom:5px}
+.cl{display:flex;gap:7px;margin-bottom:5px;flex-wrap:wrap}
+.bg{display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white!important;padding:5px 11px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none}
+.bn{display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white!important;padding:5px 11px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none}
+.note{font-size:12px;color:#555;line-height:1.5;padding-left:7px;margin-top:3px}
+/* RAIN BOX */
+.rainbox{background:linear-gradient(135deg,#e8f2fa,#f0f7ff);border:1.5px dashed #4A7FA5;border-radius:12px;padding:11px;margin-top:7px;display:flex;flex-direction:column;gap:6px}
+.raintitle{font-size:13px;font-weight:700;color:#4A7FA5;margin-bottom:3px}
+/* FOOTER */
+.footer{text-align:center;padding:18px 16px;font-size:11.5px;color:var(--gy);background:white;border-top:1px solid #e0e8e6}
 </style>
 </head>
 <body>
-
 <div class="hero">
   <h1>🏝 濟州島 5天4夜自駕遊</h1>
-  <div class="hero-sub">2025年 6/23（一）出發 ～ 6/27（五）返台<br>樂天租車 5天 ✦ 西歸浦 2夜 + 濟州市 2夜</div>
+  <div class="hero-sub">2025年 6/23（一）出發 ～ 6/27（五）返台　✦　樂天租車5天</div>
   <div class="info-grid">
     <div class="info-chip"><strong>✈️ 去程</strong>IT278 桃園06:40→濟州09:35</div>
     <div class="info-chip"><strong>✈️ 回程</strong>IT279 濟州10:30→桃園11:35</div>
@@ -259,727 +66,345 @@ body {
     <div class="info-chip"><strong>🏨 住宿</strong>西歸浦2夜 / 樂天城市2夜</div>
   </div>
 </div>
-
-<nav class="nav-wrap">
-  <button class="tab" onclick="showDay(-1)" id="tab-1"><span class="tab-day" style="color:#2b5ba8">去程</span><span class="tab-date">6/23</span><span class="tab-label">出發</span></button><button class="tab" onclick="showDay(1)" id="tab1"><span class="tab-day">Day1</span><span class="tab-date">6/23</span><span class="tab-label">抵達</span></button><button class="tab" onclick="showDay(2)" id="tab2"><span class="tab-day">Day2</span><span class="tab-date">6/24</span><span class="tab-label">城山</span></button><button class="tab" onclick="showDay(3)" id="tab3"><span class="tab-day">Day3</span><span class="tab-date">6/25</span><span class="tab-label">咸德</span></button><button class="tab" onclick="showDay(4)" id="tab4"><span class="tab-day">Day4</span><span class="tab-date">6/26</span><span class="tab-label">挾才</span></button><button class="tab" onclick="showDay(5)" id="tab5"><span class="tab-day">Day5</span><span class="tab-date">6/27</span><span class="tab-label">返台</span></button><button class="tab" onclick="showDay(6)" id="tab6"><span class="tab-day" style="color:#2b5ba8">回程</span><span class="tab-date">6/27</span><span class="tab-label">返台</span></button><button class="tab" onclick="showDay(0)" id="tab0"><span class="tab-day">➕</span><span class="tab-date">推薦</span><span class="tab-label">加選</span></button>
-</nav>
-
-<main>
-  
-
-<section class="day-section" id="day-1">
-  <div class="day-header" style="background:linear-gradient(90deg,#1a3a6e,#2b5ba8)">
-    <span class="day-num">✈️</span>
-    <div>
-      <div class="day-date">6/23（一）去程</div>
-      <div class="day-theme">虎航 IT278　桃園 → 濟州</div>
-    </div>
-  </div>
-  <div class="day-body">
-
-    <div class="flight-card outbound">
-      <div class="flight-airline">🛫 虎航 Tigerair IT278</div>
-      <div class="flight-route">
-        <div class="flight-city">
-          <div class="flight-code">TPE</div>
-          <div class="flight-name">桃園國際機場</div>
-          <div class="flight-time">06:40</div>
-        </div>
-        <div class="flight-arrow">
-          <div class="flight-line"></div>
-          <span>✈</span>
-          <div class="flight-line"></div>
-          <div class="flight-dur">約 1h 55m</div>
-        </div>
-        <div class="flight-city">
-          <div class="flight-code">CJU</div>
-          <div class="flight-name">濟州國際機場</div>
-          <div class="flight-time">09:35</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="seg-label">⏰ 出發前提醒</div>
-    <div class="ib"><span class="ib-icon">⏰</span>桃園機場建議 <strong>04:30</strong> 前抵達（T2 出境），T2 人工報到櫃台</div>
-    <div class="ib"><span class="ib-icon">🧳</span>虎航隨身行李：7kg，托運行李需額外付費，請提前網路加購</div>
-    <div class="ib"><span class="ib-icon">💴</span>建議換好韓元現金（至少 10-15 萬韓元），機場匯率差，可在台灣先換</div>
-    <div class="ib"><span class="ib-icon">📱</span>出發前安裝：<strong>Naver Map</strong>（導航）、<strong>Papago</strong>（翻譯）、<strong>Kakao T</strong>（計程車）</div>
-    <div class="ib"><span class="ib-icon">🌐</span>韓國網路：建議買 eSIM 或台灣漫遊，抵達後即可使用導航</div>
-
-    <div class="seg-label">🚗 抵達後流程</div>
-    <div class="checklist-card">
-      <div class="check-item"><span class="check-box">□</span>09:35 落地 → 提領行李（約20分鐘）</div>
-      <div class="check-item"><span class="check-box">□</span>開啟 Naver Map / SIM 卡 / eSIM 確認網路</div>
-      <div class="check-item"><span class="check-box">□</span>入境大廳1F → 樂天租車接待處 取車</div>
-      <div class="check-item"><span class="check-box">□</span>確認保險方案、油種（柴油 경유 Diesel）、車況拍照存證</div>
-      <div class="check-item"><span class="check-box">□</span>設定 Naver Map 導航前往 EGG DROP 吃早餐 🍳</div>
-    </div>
-
-    <div class="seg-label">📋 行李清單提醒</div>
-    <div class="ib"><span class="ib-icon">☑</span>護照（有效期6個月以上）、機票 QR Code</div>
-    <div class="ib"><span class="ib-icon">☑</span>韓元現金、信用卡（Visa/Master）</div>
-    <div class="ib"><span class="ib-icon">☑</span>國際駕照 + 台灣駕照（租車必備，兩本都要帶）</div>
-    <div class="ib"><span class="ib-icon">☑</span>防曬乳、薄外套（6月濟州日曬強，萬丈窟11°C需薄外套）</div>
-    <div class="ib"><span class="ib-icon">☑</span>充電線、轉接頭（韓國插座 Type A，與台灣相同可直插）</div>
-    <div class="ib"><span class="ib-icon">☑</span>樂天租車預訂確認書（電子版即可）</div>
-    <div class="ib"><span class="ib-icon">☑</span>住宿訂房確認信（西歸浦 + 樂天城市酒店）</div>
-
-    <div class="seg-label">💡 實用資訊</div>
-    <div class="ib"><span class="ib-icon">💰</span>濟州島免簽 30 天（中華民國護照），免填入境卡</div>
-    <div class="ib"><span class="ib-icon">🅿</span>景點停車費約 1,000-3,000 韓元/次，準備零錢或信用卡</div>
-    <div class="ib"><span class="ib-icon">⛽</span>加油：셀프주유소（自助加油），柴油=경유，記得加滿再還車</div>
-    <div class="ib"><span class="ib-icon">🆘</span>緊急聯絡：韓國報警 112，救護車 119，台灣外館 +82-2-399-2767</div>
-
-  </div>
-</section>
-
-<section class="day-section" id="day1">
-  <div class="day-header">
-    <span class="day-num">Day 1</span>
-    <div>
-      <div class="day-date">6/23（一）</div>
-      <div class="day-theme">抵達 ✦ 機場早餐 ✦ 白帶魚午餐 ✦ 柱狀節理帶 ✦ 每日偶來市場</div>
-    </div>
-  </div>
-  <div class="day-body">
-    <div class="seg-label">✈️ 09:35｜抵達濟州 & 取車</div><div class="ib"><span class="ib-icon">▸</span>落地濟州機場 → 提領行李 → 步行至樂天租車（機場1樓）</div><div class="ib"><span class="ib-icon">▸</span>確認保險方案、油種（多為柴油 Diesel）</div><div class="seg-label">🍳 10:00｜機場早餐</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" alt="EGG DROP 濟州機場店" onerror="this.src='https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80'" style="width:100%;height:170px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">EGG DROP 濟州機場店</div>
-    <div class="card-addr">📍 제주시 공항로 2（濟州機場入境大廳1F）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/3QNaMvbsR6vhcN4KA" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/EggDrop%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 韓國火紅三明治品牌！落地直接吃，07:00開始營業，大蒜吐司必點，自動點餐機有英文介面</p>
-  </div>
-</div><div class="seg-label">🚗 10:30｜南下西歸浦途中（約1小時）</div><div class="ib"><span class="ib-icon">▸</span>開車沿1132號海岸公路往西歸浦方向，約50分鐘</div><div class="seg-label">🍽 12:00｜午餐｜豪華白帶魚套餐</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="色達食堂 색달식당（中文白帶魚名店）" onerror="this.src='https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80'" style="width:100%;height:170px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">色達食堂 색달식당（中文白帶魚名店）</div>
-    <div class="card-addr">📍 서귀포시 예래로 255-18（中文觀光區附近）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/Vc5mJeFSyE2V4Dij6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%83%89%EB%8B%AC%EC%8B%9D%EB%8B%B9%20%EC%A4%91%EB%AC%B8" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 濟州名產白帶魚！紅燒＋烤魚雙拼套餐豐盛，有中文服務人員，距柱狀節理帶僅10分鐘車程</p>
-  </div>
-</div><div class="seg-label">🌋 14:00｜西歸浦景點</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Jeju_Jusangjeolli_Cliff.jpg/800px-Jeju_Jusangjeolli_Cliff.jpg" alt="柱狀節理帶 주상절리대" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">柱狀節理帶 주상절리대</div>
-    <div class="card-addr">📍 서귀포시 이어도로 36-30</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/gWwMwj4KMTfjRnip8" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A3%BC%EC%83%81%EC%A0%88%EB%A6%AC%EB%8C%80" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 玄武岩六角柱懸崖，亞洲罕見奇景，門票 2,000 韓元，日落前最美，步道約20分鐘</p>
-  </div>
+<nav class="nav-wrap"><button class="tab" onclick="showDay(-1)" id="tab-1"><span style="font-size:11px;font-weight:700;color:#2b5ba8">去程</span><span style="font-size:10px;color:#888">6/23</span><span style="font-size:11px;color:#1a1a2e;font-weight:600">出發</span></button><button class="tab" onclick="showDay(1)" id="tab1"><span style="font-size:11px;font-weight:700;color:#2C7873">Day1</span><span style="font-size:10px;color:#888">6/23</span><span style="font-size:11px;color:#1a1a2e;font-weight:600">抵達</span></button><button class="tab" onclick="showDay(2)" id="tab2"><span style="font-size:11px;font-weight:700;color:#2C7873">Day2</span><span style="font-size:10px;color:#888">6/24</span><span style="font-size:11px;color:#1a1a2e;font-weight:600">城山</span></button><button class="tab" onclick="showDay(3)" id="tab3"><span style="font-size:11px;font-weight:700;color:#2C7873">Day3</span><span style="font-size:10px;color:#888">6/25</span><span style="font-size:11px;color:#1a1a2e;font-weight:600">咸德</span></button><button class="tab" onclick="showDay(4)" id="tab4"><span style="font-size:11px;font-weight:700;color:#2C7873">Day4</span><span style="font-size:10px;color:#888">6/26</span><span style="font-size:11px;color:#1a1a2e;font-weight:600">挾才</span></button><button class="tab" onclick="showDay(5)" id="tab5"><span style="font-size:11px;font-weight:700;color:#2C7873">Day5</span><span style="font-size:10px;color:#888">6/27</span><span style="font-size:11px;color:#1a1a2e;font-weight:600">返台</span></button><button class="tab" onclick="showDay(6)" id="tab6"><span style="font-size:11px;font-weight:700;color:#2b5ba8">回程</span><span style="font-size:10px;color:#888">6/27</span><span style="font-size:11px;color:#1a1a2e;font-weight:600">搭機</span></button><button class="tab" onclick="showDay(0)" id="tab0"><span style="font-size:11px;font-weight:700;color:#E8604C">➕</span><span style="font-size:10px;color:#888">推薦</span><span style="font-size:11px;color:#1a1a2e;font-weight:600">加選</span></button></nav>
+<main><section class="ds" id="day-1">
+<div class="dh" style="background:linear-gradient(90deg,#1a3a6e,#2b5ba8)">
+  <span class="dn">✈️</span>
+  <div><div class="dd">6/23（一）去程</div><div class="dt">虎航 IT278　桃園 06:40 → 濟州 09:35</div></div>
 </div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Jeongbang_Falls.jpg/800px-Jeongbang_Falls.jpg" alt="正房瀑布 정방폭포" onerror="this.src='https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">正房瀑布 정방폭포</div>
-    <div class="card-addr">📍 서귀포시 칠십리로214번길 37</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/16MRLtXcqueHBYi56" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A0%95%EB%B0%A9%ED%8F%AD%ED%8F%AC" class="btn-naver">🟢 Naver Map</a>
+<div class="db"><div style="background:linear-gradient(135deg,#1a3a6e,#2b5ba8);border-radius:14px;padding:16px 14px;margin:4px 0;box-shadow:0 3px 14px rgba(0,0,0,.12);color:white">
+  <div style="font-size:11.5px;opacity:.85;margin-bottom:14px;font-weight:600;letter-spacing:.5px">🛫 虎航 Tigerair IT278</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+    <div style="text-align:center">
+      <div style="font-size:26px;font-weight:900;letter-spacing:1px">TPE</div>
+      <div style="font-size:10px;opacity:.8;margin-top:2px">桃園國際機場</div>
+      <div style="font-size:20px;font-weight:700;margin-top:6px">06:40</div>
     </div>
-    <p class="card-note">💡 亞洲唯一直接傾瀉入海的瀑布！步行下坡約10分鐘，壯觀震撼，門票約 2,000 韓元</p>
-  </div>
-</div><div class="seg-label">🏨 17:00｜入住西歸浦住宿</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="西歸浦住宿（前2夜）" onerror="this.src='https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">西歸浦住宿（前2夜）</div>
-    <div class="card-addr">📍 서귀포시 서귀동 일대（西歸浦市區）</div>
-    <div class="card-links">
-      <a href="https://www.booking.com/Share-fiutpYA" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%88%99%EC%86%8C" class="btn-naver">🟢 Naver Map</a>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:18px">
+      <div style="width:100%;height:1.5px;background:rgba(255,255,255,.4)"></div>
+      <span>✈</span>
+      <div style="width:100%;height:1.5px;background:rgba(255,255,255,.4)"></div>
+      <div style="font-size:10px;opacity:.75;margin-top:2px">約 1h 55m</div>
     </div>
-    <p class="card-note">💡 Check-in 放行李稍作休息，步行至每日偶來市場約10分鐘</p>
-  </div>
-</div><div class="seg-label">🌙 18:30｜晚餐 & 夜遊</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80" alt="西歸浦每日偶來市場 매일올레시장" onerror="this.src='https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">西歸浦每日偶來市場 매일올레시장</div>
-    <div class="card-addr">📍 서귀포시 서귀동 340</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/Wi56HTzNDgFnWsyr7" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%A7%A4%EC%9D%BC%EC%98%AC%EB%A0%88%EC%8B%9C%EC%9E%A5" class="btn-naver">🟢 Naver Map</a>
+    <div style="text-align:center">
+      <div style="font-size:26px;font-weight:900;letter-spacing:1px">CJU</div>
+      <div style="font-size:10px;opacity:.8;margin-top:2px">濟州國際機場</div>
+      <div style="font-size:20px;font-weight:700;margin-top:6px">09:35</div>
     </div>
-    <p class="card-note">💡 60年歷史！必吃秋刀魚飯捲、蒜味炸雞，開放至21:00，晚間氣氛熱鬧</p>
   </div>
+</div><div class="sl" style="background:#E8604C">⏰ 出發前行李清單</div><div style="background:#F0F7FF;border:1.5px solid #B8D4F0;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:4px;margin:2px 0"><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>護照（有效期6個月以上）+ 機票 QR Code</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>韓元現金（建議準備 15-20 萬韓元）+ 信用卡</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span><strong>國際駕照 + 台灣駕照</strong>（租車兩本都要帶！）</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>樂天租車預訂確認書（電子版即可）</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>西歸浦住宿 + 樂天城市酒店訂房確認信</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>防曬乳、薄外套（萬丈窟恆溫 11°C）</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>充電線（韓國 Type A，與台灣相同可直插）</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>已安裝：Naver Map、Papago、Kakao T</div></div><div class="sl" style="background:#E8604C">📱 出發前 App 確認</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">📍</span>Naver Map — 韓國最準確導航，景點、停車場搜尋</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🔤</span>Papago — 韓語翻譯，拍照即翻，菜單救星</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🚕</span>Kakao T — 叫計程車，歸還租車後使用</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🍽</span>CatchTable — 熱門餐廳線上候位（倫敦貝果必備）</div><div class="sl" style="background:#E8604C">✈️ 出發當天流程</div><div style="background:white;border:1.5px solid #dde8f0;border-radius:10px;overflow:hidden;margin:2px 0"><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">03:30</div><div style="font-size:13px;">起床、出門前最後確認行李</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">04:30</div><div style="font-size:13px;">抵達桃園機場 T2（虎航在第二航廈）</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">04:45</div><div style="font-size:13px;">辦理報到 Check-in、托運行李</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">05:15</div><div style="font-size:13px;">通關安檢、出境</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">05:30</div><div style="font-size:13px;">候機室等待，可買早餐</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;background:linear-gradient(90deg,#e8f2ff,#f0f8ff);"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#1a3a6e;">06:40</div><div style="font-size:13px;font-weight:700;color:#1a3a6e">✈️ IT278 起飛！</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">09:35</div><div style="font-size:13px;">濟州機場落地</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">10:00</div><div style="font-size:13px;">通關、提領行李、前往樂天租車</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">10:30</div><div style="font-size:13px;">取車完成！前往 EGG DROP 吃早餐 🍳</div></div></div><div class="sl" style="background:#E8604C">💡 實用資訊</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🛂</span>濟州島對台灣護照免簽 30 天，入境無需填申報表</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">⛽</span>加油：自助加油站 셀프주유소，柴油=경유，還車前加滿</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🅿</span>停車費約 1,000–3,000 韓元/次，多數刷卡即可</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🆘</span>緊急聯絡：報警 112，救護車 119，台灣外館 +82-2-399-2767</div></div>
+</section><section class="ds" id="day1">
+<div class="dh" style="background:linear-gradient(90deg,#2C7873,#2C7873)">
+  <span class="dn">Day 1</span>
+  <div><div class="dd">6/23（一）</div><div class="dt">抵達 ✦ 機場早餐 ✦ 白帶魚午餐 ✦ 柱狀節理帶 ✦ 每日偶來市場</div></div>
 </div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&q=80" alt="道排骨 도오갈비" onerror="this.src='https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">道排骨 도오갈비</div>
-    <div class="card-addr">📍 서귀포시 일주동로 8749-1</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/mkqMEHis5XdDYbyv6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%8F%84%EC%98%A4%EA%B0%88%EB%B9%84" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 西歸浦在地人氣排骨名店，肉質鮮嫩，建議提早到避免候位</p>
-  </div>
+<div class="db"><div class="sl" style="background:#E8604C">✈️ 09:35｜抵達濟州 & 取車</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">▸</span>落地濟州機場 → 提領行李 → 前往樂天租車（機場1F）</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">▸</span>確認保險方案、油種（柴油 경유 Diesel）、拍照記錄車況</div><div class="sl" style="background:#E8604C">🍳 10:30｜機場早餐</div><div class="card-food"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" alt="EGG DROP 濟州機場店" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">EGG DROP 濟州機場店</div>
+<div class="ca">📍 제주시 공항로 2（濟州機場入境大廳1F）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/3QNaMvbsR6vhcN4KA" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/EggDrop%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">韓國火紅三明治！落地直接吃，07:00開始營業，大蒜吐司必點，自動點餐機有英文介面</p></div></div><div class="sl" style="background:#E8604C">🚗 11:00｜南下西歸浦（約1小時）</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">▸</span>沿1132號海岸公路南下，沿途海景美麗</div><div class="sl" style="background:#E8604C">🐟 12:30｜午餐｜白帶魚名店</div><div class="card-food"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="色達食堂 색달식당（白帶魚料理）" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">色達食堂 색달식당（白帶魚料理）</div>
+<div class="ca">📍 서귀포시 예래로 255-18（中文觀光區旁）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/Vc5mJeFSyE2V4Dij6" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%83%89%EB%8B%AC%EC%8B%9D%EB%8B%B9%20%EC%A4%91%EB%AC%B8" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">濟州名產白帶魚！紅燒烤魚雙拼套餐豐盛，有中文服務員，距柱狀節理帶僅10分鐘</p></div></div><div class="sl" style="background:#E8604C">🌋 14:00｜西歸浦景點</div><div class="card-spot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Jeju_Jusangjeolli_Cliff.jpg/800px-Jeju_Jusangjeolli_Cliff.jpg" alt="柱狀節理帶 주상절리대" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">柱狀節理帶 주상절리대</div>
+<div class="ca">📍 서귀포시 이어도로 36-30</div>
+<div class="cl"><a href="https://maps.app.goo.gl/gWwMwj4KMTfjRnip8" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%A3%BC%EC%83%81%EC%A0%88%EB%A6%AC%EB%8C%80" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">玄武岩六角柱懸崖奇景，門票2,000韓元，日落前最美</p></div></div><div class="card-spot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Jeongbang_Falls.jpg/800px-Jeongbang_Falls.jpg" alt="正房瀑布 정방폭포" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">正房瀑布 정방폭포</div>
+<div class="ca">📍 서귀포시 칠십리로214번길 37</div>
+<div class="cl"><a href="https://maps.app.goo.gl/16MRLtXcqueHBYi56" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%A0%95%EB%B0%A9%ED%8F%AD%ED%8F%AC" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">亞洲唯一直接傾瀉入海的瀑布，步行下坡約10分鐘</p></div></div><div class="sl" style="background:#E8604C">🏨 17:00｜入住西歸浦住宿</div><div class="card-spot"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80" alt="西歸浦住宿（前2夜）" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">西歸浦住宿（前2夜）</div>
+<div class="ca">📍 서귀포시 서귀동 일대</div>
+<div class="cl"><a href="https://www.booking.com/Share-fiutpYA" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%88%99%EC%86%8C" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">Check-in後步行約10分鐘至每日偶來市場</p></div></div><div class="sl" style="background:#E8604C">🌙 18:30｜晚餐</div><div class="card-food"><img src="https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80" alt="西歸浦每日偶來市場 매일올레시장" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">西歸浦每日偶來市場 매일올레시장</div>
+<div class="ca">📍 서귀포시 서귀동 340</div>
+<div class="cl"><a href="https://maps.app.goo.gl/Wi56HTzNDgFnWsyr7" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%A7%A4%EC%9D%BC%EC%98%AC%EB%A0%88%EC%8B%9C%EC%9E%A5" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">60年歷史！必吃秋刀魚飯捲、蒜味炸雞，開放至21:00</p></div></div><div class="card-food"><img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&q=80" alt="道排骨 도오갈비" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">道排骨 도오갈비</div>
+<div class="ca">📍 서귀포시 일주동로 8749-1</div>
+<div class="cl"><a href="https://maps.app.goo.gl/mkqMEHis5XdDYbyv6" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%8F%84%EC%98%A4%EA%B0%88%EB%B9%84" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">西歸浦人氣排骨名店，建議提早到避免候位</p></div></div><div class="rainbox"><div class="raintitle">☂️ 雨備方案（天候不佳時）</div><div class="sl" style="background:#4A7FA5">☂️ 選項1｜Jeju Aqua Planet</div><div class="card-rain"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Jeju Aqua Planet 水族館" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">Jeju Aqua Planet 水族館</div>
+<div class="ca">📍 서귀포시 성산읍 섭지코지로 95</div>
+<div class="cl"><a href="https://maps.app.goo.gl/6Q4pFtnVKH5D3b1v9" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/jeju%20aqua%20planet" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #4A7FA5">韓國最大水族館，全天室內，票約33,000韓元</p></div></div><div class="sl" style="background:#4A7FA5">☂️ 選項2｜天地淵瀑布＋咖啡廳</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">☂️</span>正房瀑布雨天更壯觀照常去；柱狀節理帶步道溼滑需謹慎</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">☂️</span>西歸浦市區咖啡館密集，天地淵瀑布旁一帶逛逛</div></div></div>
+</section><section class="ds" id="day2">
+<div class="dh" style="background:linear-gradient(90deg,#2C7873,#2C7873)">
+  <span class="dn">Day 2</span>
+  <div><div class="dd">6/24（二）</div><div class="dt">城山日出峰 ✦ 涉地可支 ✦ 明珍鮑魚 ✦ 倫敦貝果</div></div>
 </div>
-    <div class="rain-box"><div class="rain-title">☂️ 雨備方案（天候不佳時）</div><div class="seg-rain">☂️ 選項1：Jeju Aqua Planet</div>
-<div class="card-rain">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Jeju Aqua Planet 水族館" onerror="this.src='https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">Jeju Aqua Planet 水族館</div>
-    <div class="card-addr">📍 서귀포시 성산읍 섭지코지로 95</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/6Q4pFtnVKH5D3b1v9" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/jeju%20aqua%20planet" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 韓國最大水族館，全天室內，改往城山方向可順遊</p>
-  </div>
-</div><div class="seg-rain">☂️ 選項2：天地淵瀑布＋咖啡廳</div><div class="ib"><span class="ib-icon">☂️</span>正房瀑布雨天更壯觀可照去；柱狀節理帶雨天打滑謹慎</div><div class="ib"><span class="ib-icon">☂️</span>改在西歸浦市區咖啡廳巡禮，天地淵瀑布旁一條街</div></div>
-  </div>
-</section>
-<section class="day-section" id="day2">
-  <div class="day-header">
-    <span class="day-num">Day 2</span>
-    <div>
-      <div class="day-date">6/24（二）</div>
-      <div class="day-theme">城山日出峰 ✦ 涉地可支 ✦ 明珍鮑魚 ✦ 倫敦貝果</div>
-    </div>
-  </div>
-  <div class="day-body">
-    <div class="seg-label">🌅 05:30｜清晨出發</div><div class="ib"><span class="ib-icon">▸</span>建議 05:30 出發，開車約50分鐘至城山日出峰</div><div class="ib"><span class="ib-icon">▸</span>6月日出約 05:20，建議提早到山腳佔位</div><div class="seg-label">🌋 06:00｜城山日出峰</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Seongsan_Ilchulbong.jpg/800px-Seongsan_Ilchulbong.jpg" alt="城山日出峰 성산일출봉" onerror="this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">城山日出峰 성산일출봉</div>
-    <div class="card-addr">📍 서귀포시 성산읍 일출로 284-12</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/MakRyuoXf5xizVtF6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%84%B1%EC%82%B0%EC%9D%BC%EC%B6%9C%EB%B4%89" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 UNESCO世界遺產！票價 5,000 韓元，山頂視野絕佳，下山後停車場有烤魚糕攤</p>
-  </div>
-</div><div class="seg-label">🍳 08:00｜早餐｜城山附近解決</div><div class="ib"><span class="ib-icon">🥢</span>城山日出峰停車場周邊有多家早餐小攤：紫菜包飯、魚餅湯、粥，約 5,000-8,000 韓元</div><div class="ib"><span class="ib-icon">▸</span>或至附近便利商店 GS25/CU 買熱食、三明治先填飽</div><div class="seg-label">☀️ 09:00｜涉地可支</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Seopjikoji_Jeju.jpg/800px-Seopjikoji_Jeju.jpg" alt="涉地可支 섭지코지" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">涉地可支 섭지코지</div>
-    <div class="card-addr">📍 서귀포시 성산읍 섭지코지로 107</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/5VfNzLEciHtU4ebf7" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%84%AD%EC%A7%80%EC%BD%94%EC%A7%80" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 韓劇《我叫金三順》取景地，燈塔+懸崖+草地，開車入場免費，步行繞一圈約40分鐘</p>
-  </div>
+<div class="db"><div class="sl" style="background:#E8604C">🌅 05:30｜清晨出發看日出</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">▸</span>建議05:30出發，開車約50分鐘至城山，6月日出約05:20</div><div class="card-spot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Seongsan_Ilchulbong.jpg/800px-Seongsan_Ilchulbong.jpg" alt="城山日出峰 성산일출봉" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">城山日出峰 성산일출봉</div>
+<div class="ca">📍 서귀포시 성산읍 일출로 284-12</div>
+<div class="cl"><a href="https://maps.app.goo.gl/MakRyuoXf5xizVtF6" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%84%B1%EC%82%B0%EC%9D%BC%EC%B6%9C%EB%B4%89" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">UNESCO世界遺產！票5,000韓元，山頂俯瞰絕佳，下山後停車場有烤魚糕攤</p></div></div><div class="sl" style="background:#E8604C">🍳 08:00｜早餐</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🥢</span>城山停車場周邊小攤：紫菜包飯、魚餅湯，約5,000-8,000韓元</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">▸</span>或 GS25/CU 便利商店熱食三明治先填飽</div><div class="sl" style="background:#E8604C">☀️ 09:00｜東部海岸漫步</div><div class="card-spot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Seopjikoji_Jeju.jpg/800px-Seopjikoji_Jeju.jpg" alt="涉地可支 섭지코지" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">涉地可支 섭지코지</div>
+<div class="ca">📍 서귀포시 성산읍 섭지코지로 107</div>
+<div class="cl"><a href="https://maps.app.goo.gl/5VfNzLEciHtU4ebf7" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%84%AD%EC%A7%80%EC%BD%94%EC%A7%80" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">韓劇《我叫金三順》取景地，燈塔+懸崖+草地，開車入場免費，繞一圈約40分鐘</p></div></div><div class="card-food"><img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80" alt="Cafe Mou Moon 카페 무문" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">Cafe Mou Moon 카페 무문</div>
+<div class="ca">📍 서귀포시 성산읍 섭지코지로 84</div>
+<div class="cl"><a href="https://maps.app.goo.gl/wZeDydNXxJs5Y6pV6" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EB%AC%B4%EB%AC%B8" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">涉地可支旁無敵海景咖啡廳，網紅打卡熱點</p></div></div><div class="sl" style="background:#E8604C">🐚 11:30｜午餐｜鮑魚大餐</div><div class="card-food"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="明珍鮑魚 명진전복" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">明珍鮑魚 명진전복</div>
+<div class="ca">📍 서귀포시 성산읍 고성리 236</div>
+<div class="cl"><a href="https://maps.app.goo.gl/mDYLihZPCzxAsYh48" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%AA%85%EC%A7%84%EC%A0%84%EB%B3%B5" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">鮮活現宰鮑魚刺身＋石鍋飯，11點開門即衝，用餐時段極易客滿</p></div></div><div class="sl" style="background:#E8604C">🌙 晚上｜甜點巡禮</div><div class="card-food"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80" alt="倫敦貝果 London Bagel Museum（濟州店）" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">倫敦貝果 London Bagel Museum（濟州店）</div>
+<div class="ca">📍 서귀포시 서귀동 291-1</div>
+<div class="cl"><a href="https://maps.app.goo.gl/j3eCoN6hWNoT3tKK7" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%9F%B0%EB%8D%98%EB%B2%A0%EC%9D%B4%EA%B8%80%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%A0%9C%EC%A3%BC" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">首爾名店分店！推薦蒜香奶油口味，用 CatchTable app 線上抽號碼牌</p></div></div><div class="card-food"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&q=80" alt="大蒜麵包" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">大蒜麵包</div>
+<div class="ca">📍 서귀포시 중정로 50（近每日偶來市場）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/jMvNbT5TBAsKeMKx5" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EB%A7%88%EB%8A%98%EB%B9%B5" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">現烤大蒜奶油麵包，香氣濃郁，邊走邊吃最過癮</p></div></div><div class="rainbox"><div class="raintitle">☂️ 雨備方案（天候不佳時）</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">☂️</span>城山日出峰雨天能見度低 → 可調換至晴天</div><div class="card-rain"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Jeju Aqua Planet（城山日出峰旁）" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">Jeju Aqua Planet（城山日出峰旁）</div>
+<div class="ca">📍 서귀포시 성산읍 섭지코지로 95</div>
+<div class="cl"><a href="https://maps.app.goo.gl/6Q4pFtnVKH5D3b1v9" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/jeju%20aqua%20planet" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #4A7FA5">城山旁，即時轉場，全天室內</p></div></div></div></div>
+</section><section class="ds" id="day3">
+<div class="dh" style="background:linear-gradient(90deg,#2C7873,#2C7873)">
+  <span class="dn">Day 3</span>
+  <div><div class="dd">6/25（三）</div><div class="dt">咸德海灘 ✦ 萬丈窟 ✦ 遷入濟州市 ✦ 東門市場</div></div>
 </div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80" alt="Cafe Mou Moon 카페 무문" onerror="this.src='https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">Cafe Mou Moon 카페 무문</div>
-    <div class="card-addr">📍 서귀포시 성산읍 섭지코지로 84</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/wZeDydNXxJs5Y6pV6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EB%AC%B4%EB%AC%B8" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 涉地可支旁無敵海景咖啡廳，打卡熱點，適合早午餐或咖啡小休</p>
-  </div>
-</div><div class="seg-label">🐚 11:30｜午餐｜鮑魚大餐</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="明珍鮑魚 명진전복" onerror="this.src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">明珍鮑魚 명진전복</div>
-    <div class="card-addr">📍 서귀포시 성산읍 고성리 236</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/mDYLihZPCzxAsYh48" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%AA%85%EC%A7%84%EC%A0%84%EB%B3%B5" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 鮮活現宰鮑魚刺身＋全鮑石鍋飯，11點開門即衝，用餐時段極易客滿</p>
-  </div>
-</div><div class="seg-label">🌙 晚上｜甜點巡禮</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80" alt="倫敦貝果 London Bagel Museum（濟州店）" onerror="this.src='https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">倫敦貝果 London Bagel Museum（濟州店）</div>
-    <div class="card-addr">📍 서귀포시 서귀동 291-1</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/j3eCoN6hWNoT3tKK7" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%9F%B0%EB%8D%98%EB%B2%A0%EC%9D%B4%EA%B8%80%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%A0%9C%EC%A3%BC" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 首爾名店分店！蓬鬆紮實，推薦蒜香奶油、楓糖胡桃口味，建議用 CatchTable app 線上抽號碼牌</p>
-  </div>
+<div class="db"><div class="sl" style="background:#E8604C">☀️ 上午｜東北海岸出發</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">▸</span>由西歸浦出發沿海岸線北上約1小時至咸德</div><div class="card-spot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hamdeok_beach_Jeju.jpg/800px-Hamdeok_beach_Jeju.jpg" alt="咸德海灘 함덕해수욕장" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">咸德海灘 함덕해수욕장</div>
+<div class="ca">📍 제주시 조천읍 조함해안로 525</div>
+<div class="cl"><a href="https://maps.app.goo.gl/5m93RafxMfcHojkm7" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%ED%95%A8%EB%8D%95%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">翡翠色透明淺水，夏日戲水首選，有停車場，週末建議早到</p></div></div><div class="card-food"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80" alt="lavarr 咖啡廳" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">lavarr 咖啡廳</div>
+<div class="ca">📍 제주시 조천읍 함덕리（咸德海灘旁）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/3fzoKPZUZC1Cxqsq9" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/lavarr%20%EC%A0%9C%EC%A3%BC" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">海灘旁人氣海景咖啡廳，景觀位早佔</p></div></div><div class="sl" style="background:#E8604C">🌿 下午｜地底探險</div><div class="card-spot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Manjanggul_lava_tube.jpg/800px-Manjanggul_lava_tube.jpg" alt="萬丈窟 만장굴" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504870712357-65ea720d6078?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">萬丈窟 만장굴</div>
+<div class="ca">📍 제주시 구좌읍 만장굴길 182</div>
+<div class="cl"><a href="https://maps.app.goo.gl/ehHovV3HRoiVeg847" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%A7%8C%EC%9E%A5%EA%B5%B4" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">全球最長熔岩洞穴之一，恆溫11°C，務必帶薄外套，售票至16:30</p></div></div><div class="card-spot"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="玩具模型博物館 박물관은살아있다" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">玩具模型博物館 박물관은살아있다</div>
+<div class="ca">📍 제주시 구좌읍 비자림로 2134-47</div>
+<div class="cl"><a href="https://maps.app.goo.gl/QjGpXy9DWbaDDP5X7" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%B0%95%EB%AC%BC%EA%B4%80%EC%9D%80%EC%82%B4%EC%95%84%EC%9E%88%EB%8B%A4%20%EC%A0%9C%EC%A3%BC" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">精緻仿真場景超有趣，各年齡層皆宜，票約15,000韓元</p></div></div><div class="sl" style="background:#E8604C">🏨 傍晚｜遷入濟州市樂天城市酒店</div><div class="card-spot"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="濟州市 樂天城市酒店" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">濟州市 樂天城市酒店</div>
+<div class="ca">📍 제주시 연동 261-1（蓮洞）</div>
+<div class="cl"><a href="https://www.travelclassroom.net/2016/05/lotte-city-hotel-jeju.html" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">自東部出發約40分鐘，Check-in後步行10分鐘至東門市場</p></div></div><div class="sl" style="background:#E8604C">🌙 晚上｜東門市場夜遊</div><div class="card-food"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Dongmun_Market_Jeju.jpg/800px-Dongmun_Market_Jeju.jpg" alt="東門市場 동문재래시장" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">東門市場 동문재래시장</div>
+<div class="ca">📍 제주시 관덕로14길 20</div>
+<div class="cl"><a href="https://maps.app.goo.gl/PXUsthGfahBmxmL17" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%8F%99%EB%AC%B8%EC%8B%9C%EC%9E%A5" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">濟州最大傳統市場，橘子大福、魚餅串、紫菜包飯必吃</p></div></div><div class="card-food"><img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80" alt="橘子咖啡館" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">橘子咖啡館</div>
+<div class="ca">📍 제주시 동문로（東門市場附近）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/kXswVhmEuFFRhL427" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EA%B0%90%EA%B7%A4%20%EC%B9%B4%ED%8E%98" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">柑橘主題甜點，柚子茶＆橘子拿鐵必點</p></div></div><div class="rainbox"><div class="raintitle">☂️ 雨備方案（天候不佳時）</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">✅</span>萬丈窟全室內，下雨照常去！</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">☂️</span>咸德海灘遇大雨可略過，改提早前往萬丈窟</div><div class="card-rain"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80" alt="Eco Land 生態樂園 에코랜드" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">Eco Land 生態樂園 에코랜드</div>
+<div class="ca">📍 제주시 조천읍 번영로 1278-169</div>
+<div class="cl"><a href="https://maps.app.goo.gl/Dt5D9tBsVg2Df4cP9" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #4A7FA5">蒸汽小火車穿梭森林，輕微小雨仍可玩，替代海灘</p></div></div></div></div>
+</section><section class="ds" id="day4">
+<div class="dh" style="background:linear-gradient(90deg,#2C7873,#2C7873)">
+  <span class="dn">Day 4</span>
+  <div><div class="dd">6/26（四）</div><div class="dt">挾才海灘 ✦ 歸還租車 ✦ 黑豬肉</div></div>
 </div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&q=80" alt="大蒜麵包" onerror="this.src='https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">大蒜麵包</div>
-    <div class="card-addr">📍 서귀포시 중정로 50（近每日偶來市場）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/jMvNbT5TBAsKeMKx5" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EB%A7%88%EB%8A%98%EB%B9%B5" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 現烤大蒜奶油麵包，香氣濃郁，邊走邊吃最過癮</p>
-  </div>
+<div class="db"><div class="sl" style="background:#E8604C">🍜 09:00｜早午餐｜豬肉湯麵</div><div class="card-food"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="豬肉湯飯 순대국밥 / 豬肉麵 돔베고기국수" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">豬肉湯飯 순대국밥 / 豬肉麵 돔베고기국수</div>
+<div class="ca">📍 제주시 일도이동（濟州市中心）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/YnTz28ZsGK2cdfoS6" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%88%9C%EB%8C%80%EA%B5%AD%EB%B0%A5" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">濟州道地早餐，豬骨湯底濃郁，份量紮實，09:00開門</p></div></div><div class="sl" style="background:#E8604C">🌊 11:00｜西部最美海灘</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">▸</span>由濟州市出發西行約40分鐘至挾才</div><div class="card-spot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hyeopjae_Beach_Jeju.jpg/800px-Hyeopjae_Beach_Jeju.jpg" alt="挾才海水浴場 협재해수욕장" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">挾才海水浴場 협재해수욕장</div>
+<div class="ca">📍 제주시 한림읍 협재리 2497</div>
+<div class="cl"><a href="https://maps.app.goo.gl/2hun3uxASPErpbiFA" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%ED%98%91%EC%9E%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">濟州最美白沙灘！碧藍清澈，可遠眺飛揚島，下午光線最美</p></div></div><div class="sl" style="background:#E8604C">🌅 16:00｜歸還租車</div><div class="card-spot"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80" alt="樂天租車 제주공항점" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">樂天租車 제주공항점</div>
+<div class="ca">📍 제주시 용담이동 2876（濟州機場附近）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/GwGoBFEPHw9rkQ4A6" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%84%B0%EC%B9%B4%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD%EC%A0%90" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">⚠️ 歸還前拍照記錄車況，加滿柴油，搭接駁車返酒店</p></div></div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🚕</span>還車後搭樂天城市酒店接駁車或 Kakao T 計程車返回</div><div class="sl" style="background:#E8604C">🌙 晚上｜黑豬肉大餐</div><div class="card-food"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="黑豬肉一條街 흑돼지거리" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">黑豬肉一條街 흑돼지거리</div>
+<div class="ca">📍 제주시 연동（蓮洞商圈）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/mkqMEHis5XdDYbyv6" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%ED%9D%91%EB%8F%BC%EC%A7%80%EA%B1%B0%EB%A6%AC" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">濟州必吃No.1！油脂豐厚，搭濟州米酒，通常需排隊等位</p></div></div><div class="rainbox"><div class="raintitle">☂️ 雨備方案（天候不佳時）</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">☂️</span>挾才海灘遇大雨 → 改逛蓮洞商圈購物</div><div class="card-rain"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="蓮洞商圈 / Olive Young 연동" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">蓮洞商圈 / Olive Young 연동</div>
+<div class="ca">📍 제주시 연동</div>
+<div class="cl"><a href="https://maps.app.goo.gl/bvNhGUoHbdSQRf8X6" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%97%B0%EB%8F%99%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #4A7FA5">Olive Young、服飾店集中，雨天購物最舒適</p></div></div><div class="card-rain"><img src="https://images.unsplash.com/photo-1508997449629-303059a039c0?w=800&q=80" alt="NANTA 亂打秀" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">NANTA 亂打秀</div>
+<div class="ca">📍 제주시 연동（蓮洞附近）</div>
+<div class="cl"><a href="https://maps.app.goo.gl/gFkH3QNs5JhJ3uHR7" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EB%82%9C%ED%83%80%EA%B3%B5%EC%97%B0" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #4A7FA5">廚房打擊秀，不需韓語，需提前網路預購票</p></div></div></div></div>
+</section><section class="ds" id="day5">
+<div class="dh" style="background:linear-gradient(90deg,#2C7873,#2C7873)">
+  <span class="dn">Day 5</span>
+  <div><div class="dd">6/27（五）</div><div class="dt">早班機返台（無景點）</div></div>
 </div>
-    <div class="rain-box"><div class="rain-title">☂️ 雨備方案（天候不佳時）</div><div class="ib"><span class="ib-icon">☂️</span>城山日出峰雨天能見度低 → 可調換至晴天，改訪附近 Aqua Planet</div>
-<div class="card-rain">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Jeju Aqua Planet（城山日出峰旁）" onerror="this.src='https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">Jeju Aqua Planet（城山日出峰旁）</div>
-    <div class="card-addr">📍 서귀포시 성산읍 섭지코지로 95</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/6Q4pFtnVKH5D3b1v9" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/jeju%20aqua%20planet" class="btn-naver">🟢 Naver Map</a>
+<div class="db"><div style="background:#FEF4E3;border:1.5px solid #F0C070;border-radius:10px;padding:12px 14px;margin:4px 0;font-size:13px;color:#5a3a00"><strong>⚠️ 注意：</strong>10:30 早班機 → 08:30 須抵達機場 → 07:30 退房。Day5 不安排景點，全程退房→機場→候機→返台。</div><div class="sl" style="background:#E8604C">🛍 07:00｜退房前最後採買</div><div class="card-food"><img src="https://images.unsplash.com/photo-1526887520775-4b14b8aed897?w=800&q=80" alt="東門市場 / 酒店附近便利商店" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">東門市場 / 酒店附近便利商店</div>
+<div class="ca">📍 제주시 관덕로14길 20</div>
+<div class="cl"><a href="https://maps.app.goo.gl/PXUsthGfahBmxmL17" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EB%8F%99%EB%AC%B8%EC%8B%9C%EC%9E%A5" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #F5A623">橘子大福、柑橘巧克力、海苔，帶回台灣分享</p></div></div><div class="sl" style="background:#E8604C">✈️ 07:30｜退房 & 前往機場</div><div class="card-spot"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="濟州國際機場 제주국제공항" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:175px;object-fit:cover;display:block;">
+<div class="cb"><div class="cn">濟州國際機場 제주국제공항</div>
+<div class="ca">📍 제주시 공항로 2</div>
+<div class="cl"><a href="https://maps.app.goo.gl/VrZi4h2MV2gkFWmB7" class="bg">🗺 Google Maps</a><a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" class="bn">🟢 Naver Map</a></div>
+<p class="note" style="border-left:2px solid #2C7873">酒店接駁車→報到托運→安檢→10:30 IT279起飛→11:35桃園抵達</p></div></div></div>
+</section><section class="ds" id="day6">
+<div class="dh" style="background:linear-gradient(90deg,#1a3a6e,#2b5ba8)">
+  <span class="dn">✈️</span>
+  <div><div class="dd">6/27（五）回程</div><div class="dt">虎航 IT279　濟州 10:30 → 桃園 11:35</div></div>
+</div>
+<div class="db"><div style="background:linear-gradient(135deg,#1a4f6e,#1a7ba8);border-radius:14px;padding:16px 14px;margin:4px 0;box-shadow:0 3px 14px rgba(0,0,0,.12);color:white">
+  <div style="font-size:11.5px;opacity:.85;margin-bottom:14px;font-weight:600;letter-spacing:.5px">🛬 虎航 Tigerair IT279</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+    <div style="text-align:center">
+      <div style="font-size:26px;font-weight:900;letter-spacing:1px">CJU</div>
+      <div style="font-size:10px;opacity:.8;margin-top:2px">濟州國際機場</div>
+      <div style="font-size:20px;font-weight:700;margin-top:6px">10:30</div>
     </div>
-    <p class="card-note">💡 完全室內，緊鄰城山，雨天最佳轉場選擇，票約 33,000 韓元</p>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:18px">
+      <div style="width:100%;height:1.5px;background:rgba(255,255,255,.4)"></div>
+      <span>✈</span>
+      <div style="width:100%;height:1.5px;background:rgba(255,255,255,.4)"></div>
+      <div style="font-size:10px;opacity:.75;margin-top:2px">約 1h 5m</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-size:26px;font-weight:900;letter-spacing:1px">TPE</div>
+      <div style="font-size:10px;opacity:.8;margin-top:2px">桃園國際機場</div>
+      <div style="font-size:20px;font-weight:700;margin-top:6px">11:35</div>
+    </div>
+  </div>
+</div><div class="sl" style="background:#E8604C">⏰ 回程當天時間表</div><div style="background:white;border:1.5px solid #dde8f0;border-radius:10px;overflow:hidden;margin:2px 0"><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">07:00</div><div style="font-size:13px;">起床整理行李，確認無遺漏</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">07:30</div><div style="font-size:13px;">樂天城市酒店辦理退房 Check-out</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">07:45</div><div style="font-size:13px;">搭飯店免費接駁車 → 濟州機場（約15分鐘）</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">08:30</div><div style="font-size:13px;">抵達機場，辦理報到、托運行李</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">09:00</div><div style="font-size:13px;">通關安檢 → 前往候機室</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">09:30</div><div style="font-size:13px;">候機室逛免稅店、吃早餐</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;background:linear-gradient(90deg,#e8f2ff,#f0f8ff);"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#1a3a6e;">10:30</div><div style="font-size:13px;font-weight:700;color:#1a3a6e">✈️ IT279 起飛！</div></div><div style="display:flex;align-items:flex-start;gap:12px;padding:9px 14px;border-bottom:.5px solid #eef4f8;"><div style="font-size:12px;font-weight:700;min-width:38px;padding-top:1px;color:#2b5ba8;">11:35</div><div style="font-size:13px;">桃園 T2 落地，提領行李，回家 🏠</div></div></div><div class="sl" style="background:#E8604C">🛍 最後採買清單</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🍊</span>漢拏峰橘子大福 — 東門市場或機場免稅店必買</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🍫</span>濟州柑橘巧克力 / 橘子餅乾 — 最受歡迎伴手禮</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🌿</span>濟州海苔 재래김 — 真空包裝好帶，超市有售</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🥃</span>漢拏山燒酒 한라산 소주 — 濟州限定，超市 / 便利商店</div><div class="ib"><span style="color:#2C7873;font-weight:700;flex-shrink:0">🧴</span>Olive Young 保養品 — 蓮洞店 Day4 晚最後補貨</div><div class="sl" style="background:#E8604C">📦 行李注意事項</div><div style="background:#FEF4E3;border:1.5px solid #F0C070;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:4px;margin:2px 0"><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>租車已於 6/26 晚歸還，確認車上無遺忘物品</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>生鮮食品（水果、肉類、蔬菜）不可攜帶入台</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>泡菜密封完整可帶（建議真空包裝）</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>液體 / 乳霜超 100ml 須托運，隨身不可帶上機</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>多餘韓元可在機場換回，或留著下次用</div><div style="display:flex;gap:10px;font-size:13px;align-items:flex-start;padding:3px 0"><span style="color:#2b5ba8;font-size:15px;flex-shrink:0">□</span>機場免稅店預購商品記得提貨</div></div><div style="background:linear-gradient(135deg,#e8f4f2,#f0faf8);border:1.5px solid #c0e0d8;border-radius:12px;padding:18px;text-align:center;margin-top:8px">
+  <div style="font-size:38px;margin-bottom:10px">🏝</div>
+  <div style="font-size:14px;color:#1a4a3a;line-height:1.9">感謝濟州島的美好時光！<br>
+  城山日出峰的日出、涉地可支的海風、<br>萬丈窟的神秘、挾才海灘的碧藍⋯<br>
+  <strong>旅途平安，回家後好好休息 ✨</strong></div>
+</div></div>
+</section><section class="ds" id="day0">
+<div class="dh" style="background:linear-gradient(90deg,#E8604C,#cc4433)">
+  <span class="dn">✦</span>
+  <div><div class="dd">額外推薦</div><div class="dt">可選加入行程的景點、美食、購物</div></div>
+</div>
+<div class="db"><div style="font-size:13px;font-weight:800;color:#2C7873;padding:10px 4px 5px;margin-top:4px;border-bottom:2px solid #E8F4F2">🏝 景點推薦</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Udo_Island_Jeju.jpg/800px-Udo_Island_Jeju.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">牛島 우도</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 서귀포시 성산읍 성산리（城山港搭船）</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/T2TJxkKCv5K1QWUX9" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%EC%9A%B0%EB%8F%84" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">🌟強烈推薦！城山港搭船10分鐘，花生冰淇淋超有名，租電動車環島，可接Day2城山後半天</div>
+  </div>
+</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Woljeong-ri_beach_jeju.jpg/800px-Woljeong-ri_beach_jeju.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">月汀里海邊 월정리해변</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 제주시 구좌읍 월정리</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/hb7pqL1vH5VBhSHU8" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%EC%9B%94%EC%A0%95%EB%A6%AC%ED%95%B4%EB%B3%80" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">IG打卡必訪！彩色椅子＋淺藍海水，傍晚最美，可加入Day3咸德路線</div>
+  </div>
+</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Yongduam_Rock_Jeju.jpg/800px-Yongduam_Rock_Jeju.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">龍頭岩 용두암</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 제주시 용담이동 2897</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/bL4hZe2k8N68gpgk8" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%EC%9A%A9%EB%91%90%EC%95%94" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">免費！玄武岩奇石形似龍頭，濟州市區步行可達，適合Day4還車後快速參觀</div>
+  </div>
+</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Hallasan_summit.jpg/800px-Hallasan_summit.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">漢拏山 한라산</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 제주시 1100로 2070-61（성판악登山口）</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/K3jE6XEhF3BFovVr5" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%ED%95%9C%EB%9D%BC%EC%82%B0%20%EC%84%B1%ED%8C%90%EC%95%85" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">韓國最高峰，需官網預約，全程5-9小時，體力充裕者可考慮Day3清晨安排</div>
+  </div>
+</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=80" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">史努比庭園 스누피가든</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 제주시 구좌읍 금백조로 930</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/bFRRbMUKKs9HxLqP7" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%EC%8A%A4%EB%88%84%ED%94%BC%EA%B0%80%EB%93%A0" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">超可愛史努比主題公園，打卡超出片，可排入Day3東部路線</div>
+  </div>
+</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">Eco Land 生態樂園 에코랜드</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 제주시 조천읍 번영로 1278-169</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/Dt5D9tBsVg2Df4cP9" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">復古蒸汽小火車穿梭森林湖泊，親子情侶皆宜，可排入Day3咸德路線附近</div>
+  </div>
+</div><div style="font-size:13px;font-weight:800;color:#2C7873;padding:10px 4px 5px;margin-top:4px;border-bottom:2px solid #E8F4F2">🍽 美食推薦</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">黑豬肉一條街 흑돼지거리</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 제주시 연동（蓮洞）</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/mkqMEHis5XdDYbyv6" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%ED%9D%91%EB%8F%BC%EC%A7%80%EA%B1%B0%EB%A6%AC" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">濟州必吃No.1！挑選在地人去的店，油脂豐厚肉甜不膩，搭濟州米酒絕配</div>
+  </div>
+</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">白帶魚料理 갈치조림</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 서귀포시 예래로 255-18</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/Vc5mJeFSyE2V4Dij6" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%EC%83%89%EB%8B%AC%EC%8B%9D%EB%8B%B9" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">濟州特產，色達食堂是代表名店，紅燒烤魚雙拼套餐，有中文服務員</div>
+  </div>
+</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">濟州海鮮飯捲 새우리</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 제주시 이도이동</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/YnTz28ZsGK2cdfoS6" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EC%8B%9C%EC%83%88%EC%9A%B0%EB%A6%AC" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">蝦排厚飯捲料多實在，Naver Map評分極高，濟州市熱門早午餐</div>
+  </div>
+</div><div style="font-size:13px;font-weight:800;color:#2C7873;padding:10px 4px 5px;margin-top:4px;border-bottom:2px solid #E8F4F2">🛍 購物 & 實用Tips</div><div style="display:flex;gap:0;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.09);border:1px solid #dde;margin:4px 0;background:white">
+  <div style="width:110px;min-width:110px;flex-shrink:0"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1617138275290-f30743bab77e?w=800&q=80'" style="width:100%;height:120px;object-fit:cover;display:block;"></div>
+  <div style="flex:1;padding:9px 10px;min-width:0">
+    <div style="font-size:13px;font-weight:700;margin-bottom:3px;color:#1a1a2e">蓮洞商圈 / Olive Young 연동</div>
+    <div style="font-size:11px;color:#888;margin-bottom:4px">📍 제주시 연동</div>
+    <div style="display:flex;gap:6px;margin-bottom:5px;flex-wrap:wrap">
+      <a href="https://maps.app.goo.gl/bvNhGUoHbdSQRf8X6" style="display:inline-flex;align-items:center;gap:3px;background:#2C7873;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🗺 Google Maps</a>
+      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%97%B0%EB%8F%99%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81" style="display:inline-flex;align-items:center;gap:3px;background:#03c75a;color:white;padding:4px 10px;border-radius:5px;font-size:11.5px;font-weight:600;text-decoration:none">🟢 Naver Map</a>
+    </div>
+    <div style="font-size:11.5px;color:#555;line-height:1.4">韓妝保養一站購齊，Day4晚歸還車後步行可達，回台前最後採購</div>
   </div>
 </div></div>
-  </div>
-</section>
-<section class="day-section" id="day3">
-  <div class="day-header">
-    <span class="day-num">Day 3</span>
-    <div>
-      <div class="day-date">6/25（三）</div>
-      <div class="day-theme">咸德海灘 ✦ 萬丈窟 ✦ 遷入濟州市 ✦ 東門市場</div>
-    </div>
-  </div>
-  <div class="day-body">
-    <div class="seg-label">☀️ 上午｜東北海岸出發</div><div class="ib"><span class="ib-icon">▸</span>由西歸浦出發，沿海岸線北上約1小時至咸德</div><div class="seg-label">🌊 10:00｜咸德海灘</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hamdeok_beach_Jeju.jpg/800px-Hamdeok_beach_Jeju.jpg" alt="咸德海灘 함덕해수욕장" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">咸德海灘 함덕해수욕장</div>
-    <div class="card-addr">📍 제주시 조천읍 조함해안로 525</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/5m93RafxMfcHojkm7" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%ED%95%A8%EB%8D%95%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 翡翠色透明淺水，夏日戲水首選，有停車場，週末人潮多建議早到</p>
-  </div>
-</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80" alt="lavarr 咖啡廳" onerror="this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">lavarr 咖啡廳</div>
-    <div class="card-addr">📍 제주시 조천읍 함덕리（咸德海灘旁）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/3fzoKPZUZC1Cxqsq9" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/lavarr%20%EC%A0%9C%EC%A3%BC" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 咸德旁人氣海景咖啡廳，景觀位要早佔，適合早午餐</p>
-  </div>
-</div><div class="seg-label">🌿 下午｜地底探險 & 博物館</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Manjanggul_lava_tube.jpg/800px-Manjanggul_lava_tube.jpg" alt="萬丈窟 만장굴" onerror="this.src='https://images.unsplash.com/photo-1504870712357-65ea720d6078?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">萬丈窟 만장굴</div>
-    <div class="card-addr">📍 제주시 구좌읍 만장굴길 182</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/ehHovV3HRoiVeg847" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%A7%8C%EC%9E%A5%EA%B5%B4" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 全球最長熔岩洞穴之一，全年恆溫 11°C，務必帶薄外套，售票至16:30</p>
-  </div>
-</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="玩具模型博物館 박물관은살아있다" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">玩具模型博物館 박물관은살아있다</div>
-    <div class="card-addr">📍 제주시 구좌읍 비자림로 2134-47</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/QjGpXy9DWbaDDP5X7" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%B0%95%EB%AC%BC%EA%B4%80%EC%9D%80%EC%82%B4%EC%95%84%EC%9E%88%EB%8B%A4%20%EC%A0%9C%EC%A3%BC" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 精緻仿真場景超有趣，各年齡層皆宜，票價約 15,000 韓元</p>
-  </div>
-</div><div class="seg-label">🏨 傍晚｜遷入濟州市樂天城市酒店</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80" alt="濟州市 樂天城市酒店" onerror="this.src='https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">濟州市 樂天城市酒店</div>
-    <div class="card-addr">📍 제주시 연동 261-1（蓮洞）</div>
-    <div class="card-links">
-      <a href="https://www.travelclassroom.net/2016/05/lotte-city-hotel-jeju.html" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 自東部出發約40分鐘，Check-in 放行李後步行10分鐘至東門市場</p>
-  </div>
-</div><div class="seg-label">🌙 晚上｜東門市場夜遊</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Dongmun_Market_Jeju.jpg/800px-Dongmun_Market_Jeju.jpg" alt="東門市場 동문재래시장" onerror="this.src='https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">東門市場 동문재래시장</div>
-    <div class="card-addr">📍 제주시 관덕로14길 20</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/PXUsthGfahBmxmL17" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%8F%99%EB%AC%B8%EC%8B%9C%EC%9E%A5" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 濟州市最大傳統市場，必吃橘子大福、魚餅串、紫菜包飯，夜市氣氛超熱鬧</p>
-  </div>
-</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80" alt="橘子咖啡館" onerror="this.src='https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">橘子咖啡館</div>
-    <div class="card-addr">📍 제주시 동문로（東門市場附近）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/kXswVhmEuFFRhL427" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EA%B0%90%EA%B7%A4%20%EC%B9%B4%ED%8E%98" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 柑橘主題甜點，柚子茶＆橘子拿鐵必點</p>
-  </div>
-</div>
-    <div class="rain-box"><div class="rain-title">☂️ 雨備方案（天候不佳時）</div><div class="ib"><span class="ib-icon">✅</span>萬丈窟全室內，下雨照常去！</div><div class="ib"><span class="ib-icon">☂️</span>咸德海灘遇大雨可略過，改提早去萬丈窟</div>
-<div class="card-rain">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80" alt="Eco Land 生態樂園 에코랜드" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">Eco Land 生態樂園 에코랜드</div>
-    <div class="card-addr">📍 제주시 조천읍 번영로 1278-169</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/Dt5D9tBsVg2Df4cP9" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 復古蒸汽小火車穿梭森林湖泊，輕微小雨仍可玩，可替代海灘行程</p>
-  </div>
-</div></div>
-  </div>
-</section>
-<section class="day-section" id="day4">
-  <div class="day-header">
-    <span class="day-num">Day 4</span>
-    <div>
-      <div class="day-date">6/26（四）</div>
-      <div class="day-theme">挾才海灘 ✦ 歸還租車 ✦ 黑豬肉</div>
-    </div>
-  </div>
-  <div class="day-body">
-    <div class="seg-label">🍜 09:00｜早午餐｜豬肉湯麵</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="豬肉湯飯 순대국밥 / 豬肉麵 돔베고기국수" onerror="this.src='https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">豬肉湯飯 순대국밥 / 豬肉麵 돔베고기국수</div>
-    <div class="card-addr">📍 제주시 일도이동（濟州市中心）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/YnTz28ZsGK2cdfoS6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%88%9C%EB%8C%80%EA%B5%AD%EB%B0%A5" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 濟州道地早餐，豬骨湯底濃郁，份量紮實暖胃，09:00開門衝即可</p>
-  </div>
-</div><div class="seg-label">🌊 11:00｜西部最美海灘</div><div class="ib"><span class="ib-icon">▸</span>由濟州市出發西行約40分鐘至挾才</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hyeopjae_Beach_Jeju.jpg/800px-Hyeopjae_Beach_Jeju.jpg" alt="挾才海水浴場 협재해수욕장" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">挾才海水浴場 협재해수욕장</div>
-    <div class="card-addr">📍 제주시 한림읍 협재리 2497</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/2hun3uxASPErpbiFA" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%ED%98%91%EC%9E%AC%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 濟州最美白沙灘！碧藍清澈，可遠眺飛揚島，下午光線最美，周邊有咖啡廳可休息</p>
-  </div>
-</div><div class="seg-label">🌅 16:00｜歸還租車</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80" alt="樂天租車 제주공항점" onerror="this.src='https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">樂天租車 제주공항점</div>
-    <div class="card-addr">📍 제주시 용담이동 2876（濟州機場附近）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/GwGoBFEPHw9rkQ4A6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%84%B0%EC%B9%B4%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD%EC%A0%90" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 ⚠️ 歸還前拍照記錄車況，加滿油（柴油），確認不超時，搭接駁車返酒店</p>
-  </div>
-</div><div class="ib"><span class="ib-icon">🚕</span>還車後搭樂天城市酒店接駁車（或 Kakao T 計程車）返回</div><div class="seg-label">🌙 晚上｜黑豬肉大餐</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="黑豬肉一條街 흑돼지거리" onerror="this.src='https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">黑豬肉一條街 흑돼지거리</div>
-    <div class="card-addr">📍 제주시 연동（蓮洞商圈）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/mkqMEHis5XdDYbyv6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%ED%9D%91%EB%8F%BC%EC%A7%80%EA%B1%B0%EB%A6%AC" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 濟州必吃No.1！多家黑豬肉烤肉聚集，油脂豐厚，搭濟州米酒絕配，通常需排隊等位</p>
-  </div>
-</div>
-    <div class="rain-box"><div class="rain-title">☂️ 雨備方案（天候不佳時）</div><div class="ib"><span class="ib-icon">☂️</span>挾才遇大雨 → 改逛蓮洞商圈購物，回程路上買伴手禮</div>
-<div class="card-rain">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="蓮洞商圈 / Olive Young 연동" onerror="this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">蓮洞商圈 / Olive Young 연동</div>
-    <div class="card-addr">📍 제주시 연동（蓮洞）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/bvNhGUoHbdSQRf8X6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%97%B0%EB%8F%99%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 Olive Young、服飾店集中，雨天購物最適合</p>
-  </div>
-</div>
-<div class="card-rain">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1508997449629-303059a039c0?w=800&q=80" alt="NANTA 亂打秀" onerror="this.src='https://images.unsplash.com/photo-1508997449629-303059a039c0?w=800&q=80'" style="width:100%;height:150px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">NANTA 亂打秀</div>
-    <div class="card-addr">📍 제주시 연동（蓮洞附近）</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/gFkH3QNs5JhJ3uHR7" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EB%82%9C%ED%83%80%EA%B3%B5%EC%97%B0" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 廚房打擊秀，不需韓語也能全程投入，需提前網路預購票</p>
-  </div>
-</div></div>
-  </div>
-</section>
-<section class="day-section" id="day5">
-  <div class="day-header">
-    <span class="day-num">Day 5</span>
-    <div>
-      <div class="day-date">6/27（五）</div>
-      <div class="day-theme">早班機返台（無景點）</div>
-    </div>
-  </div>
-  <div class="day-body">
-    <div class="seg-label">⚠️ 行程提醒</div><div class="ib"><span class="ib-icon">✈️</span>10:30 起飛 → 建議 08:30 抵達機場（濟州機場較小，通關快）</div><div class="ib"><span class="ib-icon">🏨</span>07:30 退房，搭樂天城市酒店接駁車赴機場（約15分鐘）</div><div class="ib"><span class="ib-icon">📋</span>Day5 無景點安排，全程：退房 → 機場 → 候機 → 返台</div><div class="seg-label">🛍 07:00｜退房前最後採買</div>
-<div class="card-food">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1526887520775-4b14b8aed897?w=800&q=80" alt="東門市場 / 酒店附近便利商店" onerror="this.src='https://images.unsplash.com/photo-1526887520775-4b14b8aed897?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">東門市場 / 酒店附近便利商店</div>
-    <div class="card-addr">📍 제주시 관덕로14길 20</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/PXUsthGfahBmxmL17" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EB%8F%99%EB%AC%B8%EC%8B%9C%EC%9E%A5" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 漢拿峰橘子大福、濟州柑橘巧克力、海苔、泡菜，帶回台灣分享</p>
-  </div>
-</div><div class="seg-label">✈️ 08:00｜退房 & 前往機場</div>
-<div class="card-spot">
-  <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80" alt="濟州國際機場 제주국제공항" onerror="this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80'" style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="card-body">
-    <div class="card-name">濟州國際機場 제주국제공항</div>
-    <div class="card-addr">📍 제주시 공항로 2</div>
-    <div class="card-links">
-      <a href="https://maps.app.goo.gl/VrZi4h2MV2gkFWmB7" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <p class="card-note">💡 08:00 退房 → 酒店接駁車 → 報到托運 → 安檢 → 10:30 虎航IT279起飛 → 11:35桃園抵達</p>
-  </div>
-</div>
-    
-  </div>
-</section>
-
-<section class="day-section" id="day6">
-  <div class="day-header" style="background:linear-gradient(90deg,#1a3a6e,#2b5ba8)">
-    <span class="day-num">✈️</span>
-    <div>
-      <div class="day-date">6/27（五）回程</div>
-      <div class="day-theme">虎航 IT279　濟州 → 桃園</div>
-    </div>
-  </div>
-  <div class="day-body">
-
-    <div class="flight-card return">
-      <div class="flight-airline">🛬 虎航 Tigerair IT279</div>
-      <div class="flight-route">
-        <div class="flight-city">
-          <div class="flight-code">CJU</div>
-          <div class="flight-name">濟州國際機場</div>
-          <div class="flight-time">10:30</div>
-        </div>
-        <div class="flight-arrow">
-          <div class="flight-line"></div>
-          <span>✈</span>
-          <div class="flight-line"></div>
-          <div class="flight-dur">約 1h 5m</div>
-        </div>
-        <div class="flight-city">
-          <div class="flight-code">TPE</div>
-          <div class="flight-name">桃園國際機場</div>
-          <div class="flight-time">11:35</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="seg-label">⏰ 回程當天時間表</div>
-    <div class="timeline-card">
-      <div class="tl-item"><div class="tl-time">07:00</div><div class="tl-text">起床、整理行李、退房準備</div></div>
-      <div class="tl-item"><div class="tl-time">07:30</div><div class="tl-text">樂天城市酒店 辦理退房（Check-out）</div></div>
-      <div class="tl-item"><div class="tl-time">07:45</div><div class="tl-text">搭樂天酒店免費接駁車 → 濟州機場（約15分鐘）</div></div>
-      <div class="tl-item"><div class="tl-time">08:30</div><div class="tl-text">抵達機場 → 辦理報到（Check-in）、托運行李</div></div>
-      <div class="tl-item"><div class="tl-time">09:00</div><div class="tl-text">通關安檢 → 前往候機室</div></div>
-      <div class="tl-item"><div class="tl-time">09:30</div><div class="tl-text">候機室內逛免稅商店、吃個早餐</div></div>
-      <div class="tl-item tl-fly"><div class="tl-time">10:30</div><div class="tl-text">✈️ IT279 起飛！</div></div>
-      <div class="tl-item"><div class="tl-time">11:35</div><div class="tl-text">桃園 T2 落地 → 提領行李 → 到家 🏠</div></div>
-    </div>
-
-    <div class="seg-label">🛍 最後採買清單</div>
-    <div class="ib"><span class="ib-icon">🍊</span>漢拏峰橘子大福（매일유업）― 東門市場或機場免稅店</div>
-    <div class="ib"><span class="ib-icon">🍫</span>濟州柑橘巧克力 / 橘子餅乾 ― 東門市場必買伴手禮</div>
-    <div class="ib"><span class="ib-icon">🌿</span>濟州海苔（재래김）― 真空包裝，適合帶回</div>
-    <div class="ib"><span class="ib-icon">🧴</span>韓國保養品 ― Olive Young 蓮洞店最後補貨</div>
-    <div class="ib"><span class="ib-icon">🥃</span>漢拏山燒酒（한라산 소주）― 濟州限定，超市或便利商店有售</div>
-    <div class="ib"><span class="ib-icon">⚠️</span>液體/乳霜超 100ml 需托運，機場液體規定請留意</div>
-
-    <div class="seg-label">📦 行李注意事項</div>
-    <div class="checklist-card">
-      <div class="check-item"><span class="check-box">□</span>租車已於 6/26 晚歸還，確認無遺忘物品</div>
-      <div class="check-item"><span class="check-box">□</span>韓元現金花完，多餘韓元可在機場換回或留著下次用</div>
-      <div class="check-item"><span class="check-box">□</span>生鮮食品（水果、肉類、蔬菜）不可攜帶入台</div>
-      <div class="check-item"><span class="check-box">□</span>泡菜密封完整可帶（建議真空包裝）</div>
-      <div class="check-item"><span class="check-box">□</span>機場免稅店提貨（如有預購）</div>
-    </div>
-
-    <div class="seg-label">🎉 旅程結語</div>
-    <div class="farewell-card">
-      <div class="farewell-emoji">🏝</div>
-      <div class="farewell-text">
-        感謝濟州島的美好時光！<br>
-        城山日出峰的日出、涉地可支的海風、<br>
-        萬丈窟的神秘、挾才海灘的碧藍⋯<br>
-        <strong>旅途平安，回家後好好休息！✨</strong>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="day-section" id="day0"><div class="day-header" style="background:linear-gradient(90deg,#E8604C,#cc4433)"><span class="day-num">✦</span><div><div class="day-date">額外推薦</div><div class="day-theme">可選加入行程的景點、美食、購物</div></div></div><div class="day-body"><div class="extra-cat">🏝 景點推薦</div>
-
-<div class="extra-card">
-  <div class="extra-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Udo_Island_Jeju.jpg/800px-Udo_Island_Jeju.jpg" alt="牛島 우도" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">牛島 우도</div>
-    <div class="extra-addr">📍 서귀포시 성산읍 성산리（城山港搭船）</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/T2TJxkKCv5K1QWUX9" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%9A%B0%EB%8F%84" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">🌟強烈推薦！城山港搭船10分鐘，花生冰淇淋超有名，租電動車環島超療癒，可接Day2城山後半天</div>
-  </div>
-</div>
-<div class="extra-card">
-  <div class="extra-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Woljeong-ri_beach_jeju.jpg/800px-Woljeong-ri_beach_jeju.jpg" alt="月汀里海邊 월정리해변" onerror="this.src='https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">月汀里海邊 월정리해변</div>
-    <div class="extra-addr">📍 제주시 구좌읍 월정리</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/hb7pqL1vH5VBhSHU8" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%9B%94%EC%A0%95%EB%A6%AC%ED%95%B4%EB%B3%80" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">IG打卡必訪！彩色椅子＋淺藍海水，傍晚最美，可加入Day3咸德路線</div>
-  </div>
-</div>
-<div class="extra-card">
-  <div class="extra-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Yongduam_Rock_Jeju.jpg/800px-Yongduam_Rock_Jeju.jpg" alt="龍頭岩 용두암" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">龍頭岩 용두암</div>
-    <div class="extra-addr">📍 제주시 용담이동 2897</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/bL4hZe2k8N68gpgk8" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%9A%A9%EB%91%90%EC%95%94" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">免費！玄武岩奇石形似龍頭，濟州市區步行可達，適合Day4還車後或Day5早晨空檔快速參觀</div>
-  </div>
-</div>
-<div class="extra-card">
-  <div class="extra-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Hallasan_summit.jpg/800px-Hallasan_summit.jpg" alt="漢拏山 한라산" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">漢拏山 한라산</div>
-    <div class="extra-addr">📍 제주시 1100로 2070-61（성판악登山口）</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/K3jE6XEhF3BFovVr5" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%ED%95%9C%EB%9D%BC%EC%82%B0%20%EC%84%B1%ED%8C%90%EC%95%85" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">韓國最高峰，需官網預約，全程5-9小時，體力充裕者可考慮Day3清晨安排</div>
-  </div>
-</div>
-<div class="extra-card">
-  <div class="extra-img"><img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=80" alt="史努比庭園 스누피가든" onerror="this.src='https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">史努比庭園 스누피가든</div>
-    <div class="extra-addr">📍 제주시 구좌읍 금백조로 930</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/bFRRbMUKKs9HxLqP7" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%8A%A4%EB%88%84%ED%94%BC%EA%B0%80%EB%93%A0" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">超可愛史努比主題公園，打卡超出片，可排入Day3東部路線</div>
-  </div>
-</div><div class="extra-cat">🍽 美食推薦</div>
-
-<div class="extra-card">
-  <div class="extra-img"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="黑豬肉一條街 흑돼지거리" onerror="this.src='https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">黑豬肉一條街 흑돼지거리</div>
-    <div class="extra-addr">📍 제주시 연동（蓮洞）</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/mkqMEHis5XdDYbyv6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%ED%9D%91%EB%8F%BC%EC%A7%80%EA%B1%B0%EB%A6%AC" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">濟州必吃No.1！挑選在地人去的店而非觀光化大店，油脂豐厚肉甜不膩</div>
-  </div>
-</div>
-<div class="extra-card">
-  <div class="extra-img"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="白帶魚料理 갈치조림" onerror="this.src='https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">白帶魚料理 갈치조림</div>
-    <div class="extra-addr">📍 서귀포시 예래로 255-18</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/Vc5mJeFSyE2V4Dij6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%83%89%EB%8B%AC%EC%8B%9D%EB%8B%B9" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">濟州特產紅燒白帶魚，色達食堂是代表名店，有中文服務</div>
-  </div>
-</div>
-<div class="extra-card">
-  <div class="extra-img"><img src="https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80" alt="海鮮飯捲 새우리" onerror="this.src='https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">海鮮飯捲 새우리</div>
-    <div class="extra-addr">📍 제주시 이도이동</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/YnTz28ZsGK2cdfoS6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EC%8B%9C%EC%83%88%EC%9A%B0%EB%A6%AC" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">蝦排厚飯捲料多實在，Naver Map評分極高，濟州市熱門早午餐</div>
-  </div>
-</div><div class="extra-cat">🛍 購物 & Tips</div>
-
-<div class="extra-card">
-  <div class="extra-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="蓮洞商圈 / Olive Young 연동" onerror="this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80'" style="width:100%;height:130px;object-fit:cover;display:block;" loading="lazy"></div>
-  <div class="extra-body">
-    <div class="extra-name">蓮洞商圈 / Olive Young 연동</div>
-    <div class="extra-addr">📍 제주시 연동</div>
-    <div class="extra-links">
-      <a href="https://maps.app.goo.gl/bvNhGUoHbdSQRf8X6" class="btn-map">🗺 Google Maps</a>
-      <a href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%20%EC%97%B0%EB%8F%99%20%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81" class="btn-naver">🟢 Naver Map</a>
-    </div>
-    <div class="extra-desc">韓妝保養一站購齊，Day4晚歸還車後步行即到，回台前最後採購</div>
-  </div>
-</div></div></section>
-</main>
-
-<div class="footer">
-  📍 每個地點均附 Google Maps 🗺 與 Naver Map 🟢 連結，點擊即開啟導航<br>
-  韓國當地建議以 <strong>Naver Map</strong> 為主，祝旅途愉快 ✨
-</div>
-
+</section></main>
+<div class="footer">📍 每個地點均附 Google Maps 🗺 與 Naver Map 🟢，點擊直接開啟導航<br>韓國導航建議以 <strong>Naver Map</strong> 為主 ✨</div>
 <script>
-function showDay(n) {
-  const key = n === -1 ? '-1' : String(n);
-  document.querySelectorAll('.day-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  const sec = document.getElementById('day' + key);
-  const tab = document.getElementById('tab' + key);
-  if (sec) sec.classList.add('active');
-  if (tab) {
-    tab.classList.add('active');
-    tab.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
-  }
-  window.scrollTo({top: 0, behavior: 'smooth'});
+function showDay(n){
+  document.querySelectorAll('.ds').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  var s=document.getElementById('day'+n), t=document.getElementById('tab'+n);
+  if(s)s.classList.add('active');
+  if(t){t.classList.add('active');t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});}
+  window.scrollTo({top:0,behavior:'smooth'});
 }
-// Show Day 1 on load
 showDay(1);
 </script>
 </body>
