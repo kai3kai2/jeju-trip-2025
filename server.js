@@ -103,21 +103,67 @@ const buildTripFlexMessage = (dayId) => {
           margin: 'xs',
           spacing: 'sm',
           contents: [
-            {
-              type: 'text',
-              text: '•',
-              color: '#999999',
-              flex: 0
-            },
-            {
-              type: 'text',
-              text: item,
-              size: 'xs',
-              color: '#666666',
-              wrap: true
-            }
+            { type: 'text', text: '•', color: '#999999', flex: 0 },
+            { type: 'text', text: item.replace(/<[^>]+>/g, ''), size: 'xs', color: '#666666', wrap: true }
           ]
         }))
+      })
+    } else if (section.type === 'checklist' && section.items) {
+      const items = section.items.slice(0, 4)
+      baseItems.push({
+        type: 'box',
+        layout: 'vertical',
+        spacing: 'xs',
+        contents: items.map(item => ({
+          type: 'box',
+          layout: 'baseline',
+          margin: 'xs',
+          spacing: 'sm',
+          contents: [
+            { type: 'text', text: '□', color: '#2b5ba8', flex: 0, size: 'xs' },
+            { type: 'text', text: item.replace(/<[^>]+>/g, ''), size: 'xs', color: '#444444', wrap: true }
+          ]
+        }))
+      })
+    } else if (section.type === 'timeline' && section.items) {
+      const items = section.items.slice(0, 5)
+      baseItems.push({
+        type: 'box',
+        layout: 'vertical',
+        spacing: 'xs',
+        contents: items.map(item => ({
+          type: 'box',
+          layout: 'baseline',
+          margin: 'xs',
+          spacing: 'sm',
+          contents: [
+            { type: 'text', text: item.time, color: '#2b5ba8', flex: 2, size: 'xs', weight: item.highlight ? 'bold' : 'regular' },
+            { type: 'text', text: item.desc, size: 'xs', color: item.highlight ? '#1a3a6e' : '#555555', wrap: true, flex: 5 }
+          ]
+        }))
+      })
+    } else if (section.type === 'flight') {
+      baseItems.push({
+        type: 'box',
+        layout: 'vertical',
+        margin: 'sm',
+        contents: [
+          { type: 'text', text: section.airline || '', size: 'xs', color: '#555555', wrap: true },
+          {
+            type: 'box', layout: 'horizontal', margin: 'sm',
+            contents: [
+              { type: 'box', layout: 'vertical', flex: 2, contents: [
+                { type: 'text', text: section.from?.code || '', weight: 'bold', size: 'lg' },
+                { type: 'text', text: section.from?.time || '', size: 'sm', color: '#555555' }
+              ]},
+              { type: 'text', text: '✈', align: 'center', flex: 1, gravity: 'center' },
+              { type: 'box', layout: 'vertical', flex: 2, contents: [
+                { type: 'text', text: section.to?.code || '', weight: 'bold', size: 'lg', align: 'end' },
+                { type: 'text', text: section.to?.time || '', size: 'sm', color: '#555555', align: 'end' }
+              ]}
+            ]
+          }
+        ]
       })
     }
   })
