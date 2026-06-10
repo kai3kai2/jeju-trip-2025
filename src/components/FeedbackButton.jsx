@@ -4,6 +4,8 @@ import FeedbackWindow from './FeedbackWindow'
 export default function FeedbackButton() {
   const [isOpen, setIsOpen] = useState(false)
 
+  if (import.meta.env.PROD) return null
+
   return (
     <>
       <button
