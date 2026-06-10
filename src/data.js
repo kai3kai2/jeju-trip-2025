@@ -1,3 +1,6 @@
+const base = import.meta.env.BASE_URL || '/'
+const img = (file) => `${base}imgs/${file}`
+
 export const tripInfo = {
   title: "🏝 濟州島 5天4夜自駕遊",
   subtitle: "2026年 6/23（二）出發 ～ 6/27（六）返台　✦　樂天租車4天",
@@ -173,7 +176,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Jeju_Jusangjeolli_Cliff.jpg/800px-Jeju_Jusangjeolli_Cliff.jpg",
+        image: img('jusang.jpg'),
         title: "柱狀節理帶 주상절리대",
         location: "서귀포시 이어도로 36-30",
         links: [
@@ -185,7 +188,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Jeongbang_Falls.jpg/800px-Jeongbang_Falls.jpg",
+        image: img('jungbang.jpg'),
         title: "正房瀑布 정방폭포",
         location: "서귀포시 칠십리로214번길 37",
         links: [
@@ -237,7 +240,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1534483509719-3feaee7c30da?w=800&q=80",
+        image: img('olle_mkt.jpg'),
         title: "西歸浦每日偶來市場 매일올레시장",
         location: "서귀포시 서귀동 340",
         links: [
@@ -298,7 +301,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Seongsan_Ilchulbong.jpg/800px-Seongsan_Ilchulbong.jpg",
+        image: img('seongsan.jpg'),
         title: "城山日出峰 성산일출봉",
         location: "서귀포시 성산읍 일출로 284-12",
         links: [
@@ -327,7 +330,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Seopjikoji_Jeju.jpg/800px-Seopjikoji_Jeju.jpg",
+        image: img('seopjikoji.jpg'),
         title: "涉地可支 섭지코지",
         location: "서귀포시 성산읍 섭지코지로 107",
         links: [
@@ -356,7 +359,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+        image: img('abalone.jpg'),
         title: "明珍鮑魚 명진전복",
         location: "서귀포시 성산읍 고성리 236",
         links: [
@@ -373,7 +376,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Udo_Island_Jeju.jpg/800px-Udo_Island_Jeju.jpg",
+        image: img('udo.jpg'),
         title: "牛島 우도（城山港出發）",
         location: "서귀포시 성산읍 성산리（城山港搭船）",
         links: [
@@ -462,7 +465,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Hamdeok_beach_Jeju.jpg/800px-Hamdeok_beach_Jeju.jpg",
+        image: img('hamdeok.jpg'),
         title: "咸德海灘 함덕해수욕장",
         location: "제주시 조천읍 조함해안로 525",
         links: [
@@ -491,7 +494,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&q=80",
+        image: img('bagel.jpg'),
         title: "倫敦貝果 London Bagel Museum（濟州店）",
         location: "서귀포시 서귀동 291-1",
         links: [
@@ -520,7 +523,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Manjanggul_lava_tube.jpg/800px-Manjanggul_lava_tube.jpg",
+        image: img('manjanggul.jpg'),
         title: "萬丈窟 만장굴",
         location: "제주시 구좌읍 만장굴길 182",
         links: [
@@ -549,7 +552,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hyeopjae_Beach_Jeju.jpg/800px-Hyeopjae_Beach_Jeju.jpg",
+        image: img('hyeopjae.jpg'),
         title: "挾才海水浴場 협재해수욕장",
         location: "제주시 한림읍 협재리 2497",
         links: [
@@ -584,7 +587,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
+        image: img('blackpork.jpg'),
         title: "黑豬肉一條街 흑돼지거리",
         location: "제주시 연동（蓮洞商圈）",
         links: [
@@ -732,7 +735,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
+        image: img('blackpork.jpg'),
         title: "黑豬肉一條街 흑돼지거리",
         location: "제주시 연동（蓮洞商圈）",
         links: [
@@ -938,7 +941,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Udo_Island_Jeju.jpg/800px-Udo_Island_Jeju.jpg",
+        image: img('udo.jpg'),
         title: "牛島 우도",
         location: "서귀포시 성산읍 성산리（城山港搭船）",
         links: [
@@ -951,7 +954,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Woljeong-ri_beach_jeju.jpg/800px-Woljeong-ri_beach_jeju.jpg",
+        image: img('woljeong.jpg'),
         title: "月汀里海邊 월정리해변",
         location: "제주시 구좌읍 월정리",
         links: [
