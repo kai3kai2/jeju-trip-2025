@@ -14,7 +14,13 @@ const PORT = process.env.PORT || 3001
 const LINE_CHANNEL_ACCESS_TOKEN = process.env.LINE_CHANNEL_ACCESS_TOKEN
 const LINE_CHANNEL_SECRET = process.env.LINE_CHANNEL_SECRET
 
-app.use(cors())
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'https://kai3kai2.github.io'
+  ]
+}))
 app.use(express.json())
 
 // 驗證 Line Webhook 簽名

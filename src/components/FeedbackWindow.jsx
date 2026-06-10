@@ -21,7 +21,8 @@ export default function FeedbackWindow({ onClose }) {
     try {
       // 發送到 Line Notify
       // 需要後端 API 來安全地處理 Token
-      const response = await fetch('/api/send-feedback', {
+      const apiBase = import.meta.env.VITE_API_URL || ''
+      const response = await fetch(`${apiBase}/api/send-feedback`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
