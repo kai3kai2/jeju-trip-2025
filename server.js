@@ -21,16 +21,19 @@ app.use(cors({
     'https://kai3kai2.github.io'
   ]
 }))
+
+// 保留 raw body 供 LINE 簽名驗證使用
+app.use('/api/line/webhook', express.raw({ type: 'application/json' }))
 app.use(express.json())
 
 // 驗證 Line Webhook 簽名
-const validateSignature = (body, signature) => {
+const validateSignature = (rawBody, signature) => {
   const hash = crypto
     .createHmac('sha256', LINE_CHANNEL_SECRET)
-    .update(body)
+    .update(rawBody)
     .digest('base64')
 
-  return signature === `sha256=${hash}`
+  return signature === hash
 }
 
 // 根據用戶訊息解析要查詢的日期
@@ -263,17 +266,18 @@ const sendLineMessage = async (userId, message) => {
 // 應用 Webhook - 接收和處理用戶訊息
 app.post('/api/line/webhook', async (req, res) => {
   try {
-    // 驗證簽名
+    // 驗證簽名（使用 raw body）
     const signature = req.get('x-line-signature')
-    const body = JSON.stringify(req.body)
+    const rawBody = req.body
 
-    if (!validateSignature(body, signature)) {
+    if (!validateSignature(rawBody, signature)) {
       console.warn('Invalid signature')
       return res.status(401).json({ error: 'Invalid signature' })
     }
 
     // 處理事件
-    const events = req.body.events || []
+    const parsed = JSON.parse(rawBody)
+    const events = parsed.events || []
 
     for (const event of events) {
       if (event.type === 'message' && event.message.type === 'text') {
