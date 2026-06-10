@@ -10,14 +10,14 @@ export const tripInfo = {
 }
 
 export const tabs = [
-  { id: "day-1", label: "去程", date: "6/23", desc: "出發", color: "blue" },
+  { id: "day-1", label: "去程", date: "搭機", desc: "提醒", color: "blue" },
   { id: "day1", label: "Day1", date: "6/23", desc: "抵達", color: "teal" },
   { id: "day2", label: "Day2", date: "6/24", desc: "城山", color: "teal" },
   { id: "day3", label: "Day3", date: "6/25", desc: "咸德", color: "teal" },
   { id: "day4", label: "Day4", date: "6/26", desc: "挾才", color: "teal" },
   { id: "day5", label: "Day5", date: "6/27", desc: "返台", color: "teal" },
-  { id: "day6", label: "回程", date: "6/27", desc: "搭機", color: "blue" },
-  { id: "day0", label: "推薦加選", date: "", desc: "", color: "red" },
+  { id: "day6", label: "回程", date: "搭機", desc: "提醒", color: "blue" },
+  { id: "day0", label: "➕", date: "推薦", desc: "加選", color: "red" },
 ]
 
 export const days = {
@@ -29,16 +29,23 @@ export const days = {
     emoji: "✈️",
     sections: [
       {
+        type: "flight",
+        airline: "🛫 虎航 Tigerair IT278",
+        from: { code: "TPE", name: "桃園國際機場", time: "06:40" },
+        to: { code: "CJU", name: "濟州國際機場", time: "09:35" },
+        duration: "約 1h 55m"
+      },
+      {
         type: "label",
         emoji: "⏰",
         title: "出發前行李清單"
       },
       {
-        type: "info",
+        type: "checklist",
         items: [
           "護照（有效期6個月以上）+ 機票 QR Code",
           "韓元現金（建議準備 15-20 萬韓元）+ 信用卡",
-          "國際駕照 + 台灣駕照（租車兩本都要帶！）",
+          "<strong>國際駕照 + 台灣駕照</strong>（租車兩本都要帶！）",
           "樂天租車預訂確認書（電子版即可）",
           "西歸浦住宿 + 樂天城市酒店訂房確認信",
           "防曬乳、薄外套（萬丈窟恆溫 11°C）",

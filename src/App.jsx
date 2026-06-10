@@ -12,14 +12,16 @@ export default function App() {
   const currentDay = days[activeDay]
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Header />
-      <Navigation tabs={tabs} activeDay={activeDay} setActiveDay={setActiveDay} />
-      <main className="max-w-full lg:max-w-4xl mx-auto pb-20">
-        {currentDay && <DayContent day={currentDay} />}
-      </main>
-      <Footer />
-      <FeedbackButton />
+    <div className="flex justify-center min-h-screen bg-[#F0F4F3]">
+      <div className="w-full max-w-[480px] flex flex-col">
+        <Header />
+        <Navigation tabs={tabs} activeDay={activeDay} setActiveDay={setActiveDay} />
+        <main className="flex-1 pb-20">
+          {currentDay && <DayContent day={currentDay} />}
+        </main>
+        <Footer />
+        <FeedbackButton />
+      </div>
     </div>
   )
 }

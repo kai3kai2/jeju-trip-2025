@@ -1,4 +1,4 @@
-# 🏝 Jeju Trip 2025
+# 🏝 Jeju Trip 2026
 
 ## [📱 點此開啟行程表](https://kai3kai2.github.io/jeju-trip-2025/)
 
@@ -13,22 +13,27 @@
 ## 💻 開發設定
 
 ### 安裝依賴
+
 ```bash
 npm install
 ```
 
 ### 開發伺服器
+
 ```bash
 npm run dev
 ```
+
 開啟 http://localhost:5173
 
 ### 構建生產版本
+
 ```bash
 npm run build
 ```
 
 ### 預覽生產版本
+
 ```bash
 npm run preview
 ```
@@ -36,8 +41,9 @@ npm run preview
 ## 📱 響應式設計
 
 該應用程式採用行動優先的設計方法，在以下裝置上均有最佳體驗：
+
 - 📱 手機 (320px+)
-- 📱 平板 (640px+)  
+- 📱 平板 (640px+)
 - 💻 桌機 (1024px+)
 
 ## 📁 項目結構
