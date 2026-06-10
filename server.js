@@ -237,11 +237,75 @@ const handleUserMessage = async (text) => {
     }
   }
 
+  // 嗨 → 網站連結 + 快速選單
+  if (text === '嗨' || text === '你好' || text === 'hi' || text === 'hello') {
+    return {
+      type: 'flex',
+      altText: '嗨！歡迎使用濟州行程助手',
+      contents: {
+        type: 'bubble',
+        body: {
+          type: 'box',
+          layout: 'vertical',
+          spacing: 'md',
+          contents: [
+            { type: 'text', text: '🏝 濟州島 5天4夜', weight: 'bold', size: 'xl' },
+            { type: 'text', text: '2026/6/23–6/27 自駕遊', size: 'sm', color: '#999999' },
+            { type: 'separator', margin: 'md' },
+            { type: 'text', text: '輸入 Day1～Day5 查詢各天行程', size: 'sm', color: '#555555', margin: 'md', wrap: true }
+          ]
+        },
+        footer: {
+          type: 'box',
+          layout: 'vertical',
+          spacing: 'sm',
+          contents: [
+            {
+              type: 'button',
+              style: 'primary',
+              color: '#2C7873',
+              action: { type: 'uri', label: '🌐 開啟完整行程網站', uri: 'https://kai3kai2.github.io/jeju-trip-2025/' }
+            },
+            {
+              type: 'box',
+              layout: 'horizontal',
+              spacing: 'sm',
+              contents: [
+                { type: 'button', style: 'secondary', action: { type: 'message', label: 'Day1', text: 'Day1' } },
+                { type: 'button', style: 'secondary', action: { type: 'message', label: 'Day2', text: 'Day2' } },
+                { type: 'button', style: 'secondary', action: { type: 'message', label: 'Day3', text: 'Day3' } }
+              ]
+            },
+            {
+              type: 'box',
+              layout: 'horizontal',
+              spacing: 'sm',
+              contents: [
+                { type: 'button', style: 'secondary', action: { type: 'message', label: 'Day4', text: 'Day4' } },
+                { type: 'button', style: 'secondary', action: { type: 'message', label: 'Day5', text: 'Day5' } },
+                { type: 'button', style: 'secondary', action: { type: 'message', label: '出發', text: '出發' } }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+
   // 關鍵詞回覆
   if (text.includes('幫助') || text.includes('help') || text === '?') {
     return {
       type: 'text',
-      text: '你可以詢問我以下內容：\n\n🗺️ 行程查詢：\n• Day1, Day2, Day3, Day4, Day5\n• 前言（出發提醒）\n• 回程\n• 推薦加選\n\n💡 範例：「Day1 的行程是什麼」'
+      text: '🗺️ 行程查詢：\n• Day1 / Day2 / Day3 / Day4 / Day5\n• 出發（搭機提醒）\n• 回程\n• 推薦加選\n\n🌐 完整行程：https://kai3kai2.github.io/jeju-trip-2025/',
+      quickReply: {
+        items: [
+          { type: 'action', action: { type: 'message', label: 'Day1', text: 'Day1' } },
+          { type: 'action', action: { type: 'message', label: 'Day2', text: 'Day2' } },
+          { type: 'action', action: { type: 'message', label: 'Day3', text: 'Day3' } },
+          { type: 'action', action: { type: 'message', label: 'Day4', text: 'Day4' } },
+          { type: 'action', action: { type: 'message', label: 'Day5', text: 'Day5' } }
+        ]
+      }
     }
   }
 
