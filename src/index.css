@@ -173,7 +173,8 @@
 
   /* Feedback Window */
   .feedback-window {
-    @apply fixed bottom-24 right-6 z-40 w-80 max-h-[500px] bg-white rounded-2xl shadow-2xl flex flex-col;
+    @apply fixed bottom-24 right-6 z-[60] w-80 bg-white rounded-2xl shadow-2xl flex flex-col;
+    max-height: calc(100vh - 120px);
     border: 1px solid #e5e7eb;
   }
 
