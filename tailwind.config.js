@@ -17,6 +17,9 @@ export default {
         dark: "#1a1a2e",
         gray: "#888",
         light: "#F7F8FA",
+      },
+      maxWidth: {
+        desktop: "90%",
       }
     },
   },

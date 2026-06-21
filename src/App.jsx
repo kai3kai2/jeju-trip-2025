@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <div className="flex justify-center min-h-screen bg-[#F0F4F3]">
-      <div className="w-full max-w-[480px] flex flex-col">
+      <div className="w-full max-w-[480px] lg:max-w-desktop flex flex-col">
         <Header />
         <Navigation tabs={tabs} activeDay={activeDay} setActiveDay={setActiveDay} />
         <main className="flex-1 pb-20">

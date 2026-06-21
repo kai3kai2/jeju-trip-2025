@@ -133,7 +133,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+        image: img('豬肉湯飯.png'),
         title: "豬肉湯飯 순대국밥 / 豬肉麵 돔베고기국수",
         location: "제주시 일도이동（濟州機場附近市區）",
         links: [
@@ -159,12 +159,12 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-        title: "玩具模型博物館 박물관은살아있다",
-        location: "제주시 구좌읍 비자림로 2134-47",
+        image: img('手辦博物館.png'),
+        title: "手辦博物館濟州 박물관은살아있다",
+        location: "濟州特別自治道 西歸浦市 安德面 上倉里 1875-8",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EB%B0%95%EB%AC%BC%EA%B4%80%EC%9D%80%EC%82%B4%EC%95%84%EC%9E%88%EB%8B%A4%20%EC%A0%9C%EC%A3%BC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%B0%95%EB%AC%BC%EA%B4%80%EC%9D%80%EC%82%B4%EC%95%84%EC%9E%88%EB%8B%A4%20%EC%A0%9C%EC%A3%BC", type: "naver" }
+          { text: "🟢 Naver Map", href: "https://naver.me/5qLvrR3Z", type: "naver" }
         ],
         note: "精緻仿真場景超有趣，各年齡層皆宜，票約15,000韓元，在南下路上順道進去"
       },
@@ -176,7 +176,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('jusang.jpg'),
+        image: img('柱狀節理帶.png'),
         title: "柱狀節理帶 주상절리대",
         location: "서귀포시 이어도로 36-30",
         links: [
@@ -188,7 +188,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('jungbang.jpg'),
+        image: img('正房瀑布.png'),
         title: "正房瀑布 정방폭포",
         location: "서귀포시 칠십리로214번길 37",
         links: [
@@ -205,7 +205,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800&q=80",
+        image: img('橘子咖啡館.png'),
         title: "橘子咖啡館",
         location: "서귀포시 서귀동（西歸浦市區）",
         links: [
@@ -222,15 +222,14 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
-        title: "西歸浦住宿（前2夜）",
-        location: "서귀포시 서귀동 일대",
+        image: img('Casaloma Hotel.png'),
+        title: "卡薩洛瑪飯店 Casaloma Hotel（前2夜）",
+        location: "서귀포시 서홍동 546",
         links: [
-          { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9D%B4%EC%A4%91%EC%84%AD%EA%B1%B0%EB%A6%AC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9D%B4%EC%A4%91%EC%84%AD%EA%B1%B0%EB%A6%AC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=서귀포시+서귀동+숙소", type: "tmap" }
+          { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/VqMhENNWPzjKmJAP6", type: "google" },
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%B9%B4%EC%82%AC%EB%A1%9C%EB%A7%88%ED%98%B8%ED%85%94%20%EC%84%9C%EA%B7%80%ED%8F%AC", type: "naver" }
         ],
-        note: "Booking.com 預訂，Check-in後步行約10分鐘至每日偶來市場"
+        note: "Check-in後步行約10分鐘至每日偶來市場"
       },
       {
         type: "label",
@@ -240,7 +239,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: img('olle_mkt.jpg'),
+        image: img('偶來市場.png'),
         title: "西歸浦每日偶來市場 매일올레시장",
         location: "서귀포시 서귀동 340",
         links: [
@@ -252,7 +251,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1590301157890-4810ed352733?w=800&q=80",
+        image: img('道排骨.png'),
         title: "道排骨 도오갈비",
         location: "서귀포시 일주동로 8749-1",
         links: [
@@ -269,13 +268,12 @@ export const days = {
       {
         type: "card",
         cardType: "rain",
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+        image: img('水族館.png'),
         title: "Jeju Aqua Planet 水族館",
         location: "서귀포시 성산읍 섭지코지로 95",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=아쿠아플라넷+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "naver" }
         ],
         note: "韓國最大水族館，全天室內，票約33,000韓元"
       }
@@ -301,7 +299,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('seongsan.jpg'),
+        image: img('城山日出峰.png'),
         title: "城山日出峰 성산일출봉",
         location: "서귀포시 성산읍 일출로 284-12",
         links: [
@@ -330,7 +328,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('seopjikoji.jpg'),
+        image: img('涉地可支.png'),
         title: "涉地可支 섭지코지",
         location: "서귀포시 성산읍 섭지코지로 107",
         links: [
@@ -342,7 +340,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80",
+        image: img('Cafe Mou Moon.png'),
         title: "Cafe Mou Moon 카페 무문",
         location: "서귀포시 성산읍 섭지코지로 84",
         links: [
@@ -359,7 +357,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: img('abalone.jpg'),
+        image: img('明珍鮑魚.png'),
         title: "明珍鮑魚 명진전복",
         location: "서귀포시 성산읍 고성리 236",
         links: [
@@ -376,7 +374,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('udo.jpg'),
+        image: img('牛島.png'),
         title: "牛島 우도（城山港出發）",
         location: "서귀포시 성산읍 성산리（城山港搭船）",
         links: [
@@ -393,13 +391,12 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80",
+        image: img('醬蟹.png'),
         title: "醬蟹 간장게장（성산읍 인근）",
         location: "서귀포시 성산읍 일대（城山 附近）",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%A0%9C%EC%A3%BC%20%EA%B0%84%EC%9E%A5%EA%B2%8C%EC%9E%A5", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%84%B1%EC%82%B0%20%EA%B0%84%EC%9E%A5%EA%B2%8C%EC%9E%A5", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=성산항+여객터미널", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%84%B1%EC%82%B0%20%EA%B0%84%EC%9E%A5%EA%B2%8C%EC%9E%A5", type: "naver" }
         ],
         note: "牛島玩完晚上來吃！醬蟹是「飯的強盜」，鮮蟹醃漬入味，配白飯絕配。⚠️ 建議出發前 Naver Map 確認營業時間"
       },
@@ -411,13 +408,12 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80",
-        title: "西歸浦住宿（第2夜）",
-        location: "서귀포시 서귀동 일대",
+        image: img('Casaloma Hotel.png'),
+        title: "卡薩洛瑪飯店 Casaloma Hotel（第2夜）",
+        location: "서귀포시 서홍동 546",
         links: [
-          { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9D%B4%EC%A4%91%EC%84%AD%EA%B1%B0%EB%A6%AC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9D%B4%EC%A4%91%EC%84%AD%EA%B1%B0%EB%A6%AC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=서귀포시+서귀동+숙소", type: "tmap" }
+          { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/VqMhENNWPzjKmJAP6", type: "google" },
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%B9%B4%EC%82%AC%EB%A1%9C%EB%A7%88%ED%98%B8%ED%85%94%20%EC%84%9C%EA%B7%80%ED%8F%AC", type: "naver" }
         ],
         note: "醬蟹吃完驅車回西歸浦住宿，明日清晨05:30出發去城山，建議早點休息"
       },
@@ -433,13 +429,12 @@ export const days = {
       {
         type: "card",
         cardType: "rain",
-        image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+        image: img('水族館.png'),
         title: "Jeju Aqua Planet（城山日出峰旁）",
         location: "서귀포시 성산읍 섭지코지로 95",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=아쿠아플라넷+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "naver" }
         ],
         note: "城山旁，即時轉場，全天室內"
       }
@@ -465,7 +460,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('hamdeok.jpg'),
+        image: img('咸德海灘.png'),
         title: "咸德海灘 함덕해수욕장",
         location: "제주시 조천읍 조함해안로 525",
         links: [
@@ -477,7 +472,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80",
+        image: img('Lavarr Cafe.png'),
         title: "lavarr 咖啡廳",
         location: "제주시 조천읍 함덕리（咸德海灘旁）",
         links: [
@@ -494,7 +489,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: img('bagel.jpg'),
+        image: img('倫敦貝果.png'),
         title: "倫敦貝果 London Bagel Museum（濟州店）",
         location: "서귀포시 서귀동 291-1",
         links: [
@@ -506,7 +501,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=800&q=80",
+        image: img('大蒜麵包.png'),
         title: "大蒜麵包",
         location: "서귀포시 중정로 50（近每日偶來市場）",
         links: [
@@ -523,7 +518,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('manjanggul.jpg'),
+        image: img('萬丈窟.png'),
         title: "萬丈窟 만장굴",
         location: "제주시 구좌읍 만장굴길 182",
         links: [
@@ -552,7 +547,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('hyeopjae.jpg'),
+        image: img('挾才海水浴場.png'),
         title: "挾才海水浴場 협재해수욕장",
         location: "제주시 한림읍 협재리 2497",
         links: [
@@ -569,13 +564,12 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
+        image: img('樂天酒店.png'),
         title: "濟州市 樂天城市酒店",
         location: "제주시 연동 261-1（蓮洞）",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=롯데시티호텔+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "naver" }
         ],
         note: "Check-in 放行李，今晚起步行＆計程車代步，仍有租車可開"
       },
@@ -587,7 +581,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: img('blackpork.jpg'),
+        image: img('黑豬肉一條街.png'),
         title: "黑豬肉一條街 흑돼지거리",
         location: "제주시 연동（蓮洞商圈）",
         links: [
@@ -599,20 +593,19 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+        image: img('色達時常.png'),
         title: "白帶魚料理 갈치조림（色達食堂）",
         location: "서귀포시 예래로 255-18",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%83%89%EB%8B%AC%EC%8B%9D%EB%8B%B9%20%EC%A4%91%EB%AC%B8", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%83%89%EB%8B%AC%EC%8B%9D%EB%8B%B9%20%EC%A4%91%EB%AC%B8", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=색달식당+제주+중문", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%83%89%EB%8B%AC%EC%8B%9D%EB%8B%B9%20%EC%A4%91%EB%AC%B8", type: "naver" }
         ],
         note: "濟州特產白帶魚，紅燒清蒸都鮮美，市區多家可選"
       },
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+        image: img('炸醬麵.png'),
         title: "炸醬麵 짜장면（韓式中華料理）",
         location: "제주시 연동 일대（蓮洞周邊）",
         links: [
@@ -637,15 +630,26 @@ export const days = {
       {
         type: "card",
         cardType: "rain",
-        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+        image: img('Eco Land生態樂園.png'),
         title: "Eco Land 生態樂園 에코랜드",
         location: "제주시 조천읍 번영로 1278-169",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=에코랜드+테마파크+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC", type: "naver" }
         ],
         note: "蒸汽小火車穿梭森林，輕微小雨仍可玩，替代海灘"
+      },
+      {
+        type: "card",
+        cardType: "rain",
+        image: img('光之地堡.png'),
+        title: "光之地堡 빛의 벙커（濟州島東邊）",
+        location: "제주시 구좌읍 비자림로 2894-78",
+        links: [
+          { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EB%B9%9B%EC%9D%98%EB%B2%99%EC%BB%A4%20%EC%A0%9C%EC%A3%BC", type: "google" },
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%B9%9B%EC%9D%98%EB%B2%99%EC%BB%A4%20%EC%A0%9C%EC%A3%BC", type: "naver" }
+        ],
+        note: "全室內沉浸式光影展，雨天最佳選擇，票約15,000韓元，位於東部비자림路上"
       }
     ]
   },
@@ -665,7 +669,7 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Jeju_Mokgwana.jpg/800px-Jeju_Mokgwana.jpg",
+        image: img('濟州官衙.png'),
         title: "濟州牧官衙 제주목관아",
         location: "제주시 관덕로 25",
         links: [
@@ -682,7 +686,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Dongmun_Market_Jeju.jpg/800px-Dongmun_Market_Jeju.jpg",
+        image: img('東門市場.png'),
         title: "東門市場 동문재래시장",
         location: "제주시 관덕로14길 20",
         links: [
@@ -699,13 +703,12 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+        image: img('蓮洞商圈.png'),
         title: "蓮洞商圈 / Olive Young 연동",
         location: "제주시 연동",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%20%EC%A0%9C%EC%A3%BC%EC%97%B0%EB%8F%99", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%20%EC%A0%9C%EC%A3%BC%EC%97%B0%EB%8F%99", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=올리브영+제주+연동", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%98%AC%EB%A6%AC%EB%B8%8C%EC%98%81%20%EC%A0%9C%EC%A3%BC%EC%97%B0%EB%8F%99", type: "naver" }
         ],
         note: "Olive Young 韓妝保養、服飾店集中，回台前採購伴手禮最佳時機"
       },
@@ -717,13 +720,12 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80",
+        image: img('樂天租車.png'),
         title: "樂天租車 제주공항점",
         location: "제주시 용담이동 2876（濟州機場附近）",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%84%B0%EC%B9%B4%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD%EC%A0%90", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%84%B0%EC%B9%B4%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD%EC%A0%90", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=롯데렌터카+제주공항점", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EB%A0%8C%ED%84%B0%EC%B9%B4%20%EC%A0%9C%EC%A3%BC%EA%B3%B5%ED%95%AD%EC%A0%90", type: "naver" }
         ],
         note: "⚠️ 歸還前加滿柴油（경유 Diesel）、拍照記錄車況。還車後搭接駁車或 Kakao T 返回酒店"
       },
@@ -735,7 +737,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: img('blackpork.jpg'),
+        image: img('黑豬肉一條街.png'),
         title: "黑豬肉一條街 흑돼지거리",
         location: "제주시 연동（蓮洞商圈）",
         links: [
@@ -752,13 +754,12 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
+        image: img('樂天酒店.png'),
         title: "濟州市 樂天城市酒店",
         location: "제주시 연동 261-1（蓮洞）",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=롯데시티호텔+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "naver" }
         ],
         note: "黑豬肉一條街步行回酒店，明日 07:30 退房，建議打包行李、確認遺留物"
       },
@@ -774,7 +775,7 @@ export const days = {
       {
         type: "card",
         cardType: "rain",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+        image: img('蓮洞商圈.png'),
         title: "蓮洞商圈 / Olive Young",
         location: "제주시 연동",
         links: [
@@ -786,13 +787,12 @@ export const days = {
       {
         type: "card",
         cardType: "rain",
-        image: "https://images.unsplash.com/photo-1508997449629-303059a039c0?w=800&q=80",
+        image: img('亂打秀.png'),
         title: "NANTA 亂打秀",
         location: "제주시 연동（蓮洞附近）",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%A0%9C%EC%A3%BC%EB%82%9C%ED%83%80%ED%98%B8%ED%85%94", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EB%82%9C%ED%83%80%ED%98%B8%ED%85%94", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=난타+공연+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EB%82%9C%ED%83%80%ED%98%B8%ED%85%94", type: "naver" }
         ],
         note: "廚房打擊秀，不需韓語，需提前網路預購票"
       }
@@ -820,13 +820,12 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80",
+        image: img('樂天酒店.png'),
         title: "濟州市 樂天城市酒店 退房",
         location: "제주시 연동 261-1（蓮洞）",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=롯데시티호텔+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%A1%AF%EB%8D%B0%EC%8B%9C%ED%8B%B0%ED%98%B8%ED%85%94%20%EC%A0%9C%EC%A3%BC", type: "naver" }
         ],
         note: "07:30 辦理退房 Check-out，搭免費接駁車前往濟州機場（約15分鐘），退房前確認行李無遺漏"
       },
@@ -838,7 +837,7 @@ export const days = {
       {
         type: "card",
         cardType: "food",
-        image: "https://images.unsplash.com/photo-1526887520775-4b14b8aed897?w=800&q=80",
+        image: img('東門市場.png'),
         title: "東門市場 / 酒店附近便利商店",
         location: "제주시 관덕로14길 20",
         links: [
@@ -941,78 +940,72 @@ export const days = {
       {
         type: "card",
         cardType: "spot",
-        image: img('udo.jpg'),
+        image: img('牛島.png'),
         title: "牛島 우도",
         location: "서귀포시 성산읍 성산리（城山港搭船）",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%82%B0%ED%95%AD%20%EC%A2%85%ED%95%A9%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%84%B1%EC%82%B0%ED%95%AD%20%EC%A2%85%ED%95%A9%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=성산항+여객터미널", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%84%B1%EC%82%B0%ED%95%AD%20%EC%A2%85%ED%95%A9%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90", type: "naver" }
         ],
         note: "🌟強烈推薦！城山港搭船10分鐘，花生冰淇淋超有名，租電動車環島，可接Day2城山後半天"
       },
       {
         type: "card",
         cardType: "spot",
-        image: img('woljeong.jpg'),
+        image: img('月汀里海邊.png'),
         title: "月汀里海邊 월정리해변",
         location: "제주시 구좌읍 월정리",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%9B%94%EC%A0%95%EB%A6%AC%ED%95%B4%EB%B3%80", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%9B%94%EC%A0%95%EB%A6%AC%ED%95%B4%EB%B3%80", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=월정리해변", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%9B%94%EC%A0%95%EB%A6%AC%ED%95%B4%EB%B3%80", type: "naver" }
         ],
         note: "IG打卡必訪！彩色椅子＋淺藍海水，傍晚最美，可加入Day3咸德路線"
       },
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Yongduam_Rock_Jeju.jpg/800px-Yongduam_Rock_Jeju.jpg",
+        image: img('龍頭岩.png'),
         title: "龍頭岩 용두암",
         location: "제주시 용담이동 2897",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%9A%A9%EB%91%90%EC%95%94", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%9A%A9%EB%91%90%EC%95%94", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=용두암+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%9A%A9%EB%91%90%EC%95%94", type: "naver" }
         ],
         note: "免費！玄武岩奇石形似龍頭，濟州市區步行可達，適合Day4還車後快速參觀"
       },
       {
         type: "card",
         cardType: "spot",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Hallasan_summit.jpg/800px-Hallasan_summit.jpg",
+        image: img('漢努山.png'),
         title: "漢拏山 한라산",
         location: "제주시 1100로 2070-61（성판악登山口）",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%ED%95%9C%EB%9D%BC%EC%82%B0%20%EC%84%B1%ED%8C%90%EC%95%85%ED%83%90%EB%B0%A9%EB%A1%9C", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%ED%95%9C%EB%9D%BC%EC%82%B0%20%EC%84%B1%ED%8C%90%EC%95%85%ED%83%90%EB%B0%A9%EB%A1%9C", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=한라산+성판악+탐방로", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%ED%95%9C%EB%9D%BC%EC%82%B0%20%EC%84%B1%ED%8C%90%EC%95%85%ED%83%90%EB%B0%A9%EB%A1%9C", type: "naver" }
         ],
         note: "韓國最高峰，需官網預約，全程5-9小時，體力充裕者可考慮Day3清晨安排"
       },
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=80",
+        image: img('史奴比庭園.png'),
         title: "史努比庭園 스누피가든",
         location: "제주시 구좌읍 금백조로 930",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%8A%A4%EB%88%84%ED%94%BC%EA%B0%80%EB%93%A0%20%EC%A0%9C%EC%A3%BC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%8A%A4%EB%88%84%ED%94%BC%EA%B0%80%EB%93%A0%20%EC%A0%9C%EC%A3%BC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=스누피가든+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%8A%A4%EB%88%84%ED%94%BC%EA%B0%80%EB%93%A0%20%EC%A0%9C%EC%A3%BC", type: "naver" }
         ],
         note: "超可愛史努比主題公園，打卡超出片，可排入Day3東部路線"
       },
       {
         type: "card",
         cardType: "spot",
-        image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+        image: img('Eco Land生態樂園.png'),
         title: "Eco Land 生態樂園 에코랜드",
         location: "제주시 조천읍 번영로 1278-169",
         links: [
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC", type: "google" },
-          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC", type: "naver" },
-          { text: "🚗 T-map", href: "https://tmap.life/search?keyword=에코랜드+테마파크+제주", type: "tmap" }
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC", type: "naver" }
         ],
         note: "復古蒸汽小火車穿梭森林湖泊，親子情侶皆宜，可排入Day3咸德路線附近"
       }
