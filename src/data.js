@@ -276,6 +276,18 @@ export const days = {
           { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "naver" }
         ],
         note: "韓國最大水族館，全天室內，票約33,000韓元"
+      },
+      {
+        type: "card",
+        cardType: "rain",
+        image: img('Arte Museum Jeju.png'),
+        title: "Arte Museum Jeju 아르떼뮤지엄 제주（濟州島西邊）",
+        location: "제주시 애월읍 어림비로 478",
+        links: [
+          { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%95%84%EB%A5%B4%EB%96%BC%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%A0%9C%EC%A3%BC", type: "google" },
+          { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%95%84%EB%A5%B4%EB%96%BC%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%A0%9C%EC%A3%BC", type: "naver" }
+        ],
+        note: "沉浸式數位藝術展，全室內，票約18,000韓元，位於愛月邑西部"
       }
     ]
   },
@@ -650,8 +662,8 @@ export const days = {
           { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EB%B9%9B%EC%9D%98%EB%B2%99%EC%BB%A4%20%EC%A0%9C%EC%A3%BC", type: "naver" }
         ],
         note: "全室內沉浸式光影展，雨天最佳選擇，票約15,000韓元，位於東部비자림路上"
-      }
-    ]
+      },
+      ]
   },
 
   "day4": {
