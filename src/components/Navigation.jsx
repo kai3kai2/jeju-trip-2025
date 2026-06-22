@@ -1,4 +1,9 @@
+import { useEffect, useRef } from 'react'
+
 export default function Navigation({ tabs, activeDay, setActiveDay }) {
+  const navRef = useRef(null)
+  const btnRefs = useRef({})
+
   const getTabColor = (color) => {
     const colors = {
       blue: 'text-[#2b5ba8]',
@@ -8,11 +13,20 @@ export default function Navigation({ tabs, activeDay, setActiveDay }) {
     return colors[color] || colors.teal
   }
 
+  // 切換分頁時，讓作用中的分頁按鈕自動捲入可視範圍（尤其手機左右滑動後）
+  useEffect(() => {
+    const btn = btnRefs.current[activeDay]
+    if (btn) {
+      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    }
+  }, [activeDay])
+
   return (
-    <nav className="nav-wrap">
+    <nav className="nav-wrap" ref={navRef}>
       {tabs.map((tab) => (
         <button
           key={tab.id}
+          ref={(el) => { btnRefs.current[tab.id] = el }}
           onClick={() => setActiveDay(tab.id)}
           className={`tab ${activeDay === tab.id ? 'active' : ''}`}
           style={{ paddingLeft: '8px', paddingRight: '8px', minWidth: '50px' }}

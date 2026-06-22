@@ -14,6 +14,7 @@ export const tripInfo = {
 
 export const tabs = [
   { id: "day-1", label: "去程", date: "搭機", desc: "提醒", color: "blue" },
+  { id: "drive", label: "🚗開車", date: "自駕", desc: "須知", color: "red" },
   { id: "day1", label: "Day1", date: "6/23", desc: "抵達", color: "teal" },
   { id: "day2", label: "Day2", date: "6/24", desc: "城山", color: "teal" },
   { id: "day3", label: "Day3", date: "6/25", desc: "咸德", color: "teal" },
@@ -106,6 +107,147 @@ export const days = {
     ]
   },
 
+  "drive": {
+    id: "drive",
+    title: "🚗 濟州島自駕注意事項",
+    subtitle: "出發前必看！韓國行車規則 · 速限 · 事故處理 SOP",
+    headerGradient: "from-green-600 to-green-700",
+    emoji: "🚗",
+    sections: [
+      {
+        type: "info",
+        items: [
+          "韓國與台灣相同：左駕、靠右行駛，上手不難，但規則更嚴、罰則更重，務必全員看完這頁！",
+          "濟州測速照相、區間測速密布，租車違規罰單會寄回租車公司並從信用卡扣款，切勿僥倖。"
+        ]
+      },
+      {
+        type: "label",
+        emoji: "📄",
+        title: "一、上路必帶證件（缺一不可）"
+      },
+      {
+        type: "checklist",
+        items: [
+          "<strong>國際駕照（B類，日內瓦公約）</strong> — 入境韓國一年內有效",
+          "<strong>台灣駕照正本</strong> — 韓國規定須與國際駕照一起隨身攜帶，缺一即屬無照駕駛",
+          "護照 — 租車取車核對身分用",
+          "樂天租車預訂確認書 + 駕駛人本人信用卡",
+          "⚠️ 三本證件（國際駕照＋台灣駕照＋護照）開車時務必都帶在身上"
+        ]
+      },
+      {
+        type: "label",
+        emoji: "🚦",
+        title: "二、與台灣不一樣的地方"
+      },
+      {
+        type: "info",
+        items: [
+          "紅燈可右轉，但新規須「先完全停車」確認左方來車與行人，無人才可右轉；行人穿越中嚴禁右轉。",
+          "看到「비보호（無保護左轉）」標示：沒有左轉燈，需自行看號誌與來車狀況左轉。",
+          "行人最大！只要行人在斑馬線上或準備穿越，車輛一律停讓，違者重罰。",
+          "全車（含後座）強制繫安全帶；6歲以下兒童須使用安全座椅（可向租車公司加租）。",
+          "導航建議用 Naver Map 或 Kakao Navi，輸入電話號碼或景點韓文最準。"
+        ]
+      },
+      {
+        type: "label",
+        emoji: "⚡",
+        title: "三、速限規定（安全速度 5030）"
+      },
+      {
+        type: "info",
+        items: [
+          "市區主要道路：50 km/h",
+          "市區巷弄 / 住宅區：30 km/h",
+          "兒童保護區（校區）：30 km/h（取締最嚴，務必減速）",
+          "郊區一般道路：60–80 km/h",
+          "高速公路 / 快速道路：100–110 km/h（依路段標誌為準）",
+          "🚨 一切以路邊與路面標誌實際數字為準，寧慢勿快。"
+        ]
+      },
+      {
+        type: "label",
+        emoji: "🏫",
+        title: "四、兒童保護區「民植法 민식이법」"
+      },
+      {
+        type: "info",
+        items: [
+          "學校、幼兒園周邊半徑約300公尺劃為「兒童保護區」，地面常漆成紅色並標示 30。",
+          "區內限速30、違規一律加倍處罰，常設固定測速與監視器。",
+          "若在區內肇事致兒童傷亡，將面臨極重刑責，看到請務必大幅減速、隨時準備停車。"
+        ]
+      },
+      {
+        type: "label",
+        emoji: "🍺",
+        title: "五、酒駕零容忍（千萬別碰）"
+      },
+      {
+        type: "info",
+        items: [
+          "血中酒精濃度 0.03%（約一杯啤酒）即屬違法。",
+          "0.03–0.08%：吊扣駕照＋罰款 / 拘役；0.08% 以上：直接吊銷。",
+          "外國人酒駕同樣重罰，並可能影響日後入境，喝酒就交給代駕或計程車（Kakao T）。"
+        ]
+      },
+      {
+        type: "label",
+        emoji: "⛽",
+        title: "六、加油與停車"
+      },
+      {
+        type: "info",
+        items: [
+          "本次為柴油車：認明「경유（Diesel）」油槍，千萬別加錯成「휘발유（汽油）」！",
+          "自助加油站（셀프주유소）較便宜，可請站務協助或用 Papago 翻譯操作。",
+          "還車前務必加滿油，並拍照記錄油表與車況。",
+          "停車多為計時收費，約 1,000–3,000 韓元/次，多數可刷卡；勿停紅線與身障 / 婦幼車位。"
+        ]
+      },
+      {
+        type: "label",
+        emoji: "🚨",
+        title: "七、發生事故處理 SOP（即使小擦撞也要做）"
+      },
+      {
+        type: "timeline",
+        items: [
+          { time: "1", desc: "確保安全：開雙黃燈、後方放三角警示牌，人員移至安全處", highlight: true },
+          { time: "2", desc: "拍照存證：雙方車牌、車輛位置、所有損傷、現場全景" },
+          { time: "3", desc: "報警 112：即使小擦撞也必須報警取得紀錄，否則保險無法理賠" },
+          { time: "4", desc: "有人受傷立刻叫救護車 119" },
+          { time: "5", desc: "聯繫樂天租車：依保險方案指示處理，勿私下和解" },
+          { time: "6", desc: "需要翻譯協助打 1330（觀光通譯專線，提供中文）" },
+          { time: "7", desc: "未經拍照與報案前，勿擅自移車（若嚴重影響交通，移車前先拍照定位）" }
+        ]
+      },
+      {
+        type: "label",
+        emoji: "☎️",
+        title: "八、緊急聯絡電話（存進手機）"
+      },
+      {
+        type: "info",
+        items: [
+          "🚓 報警：112",
+          "🚑 救護車 / 消防：119",
+          "🗣 旅遊諮詢・翻譯（24小時中文）：1330",
+          "🚘 樂天租車緊急專線：取車時索取並記下",
+          "🏛 駐韓國台北代表部急難救助：+82-2-399-2767"
+        ]
+      },
+      {
+        type: "info",
+        items: [
+          "💡 心法：濟州路況單純好開，最大風險是超速與兒童保護區，全程「看標誌、守速限、禮讓行人」就能安全玩遍濟州！"
+        ]
+      }
+    ]
+  },
+
   "day1": {
     id: "day1",
     title: "6/23（二）",
@@ -178,7 +320,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/6PGRqdehzDdjDVkV6", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/5qLvrR3Z", type: "naver" }
         ],
-        note: "精緻仿真場景超有趣，各年齡層皆宜，票約15,000韓元，在南下路上順道進去"
+        note: "全球知名的3D錯視藝術博物館，運用立體繪畫與仿真場景打造可互動拍照的趣味空間，從恐龍、名畫到海底世界主題豐富，大人小孩都能玩得開心。💰 成人約 15,000 韓元、青少年/兒童約 13,000 韓元。🎫 Klook、KKday 線上購票常有約8折優惠（約 11,000–12,000 韓元），出示電子票券即可入場，南下西歸浦路上順道安排"
       },
       {
         type: "label",
@@ -195,7 +337,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%A3%BC%EC%83%81%EC%A0%88%EB%A6%AC%EB%8C%80", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/5UEc0zez", type: "naver" }
         ],
-        note: "玄武岩六角柱懸崖奇景，09:00–18:00（入場 17:40），票 2,000 韓元，連中無休"
+        note: "玄武岩遇海水急速冷卻形成的六角形石柱懸崖，是濟州最具代表性的火山地質奇景，海浪拍打石柱噴起浪花氣勢磅礡，設有木棧觀景步道輕鬆好走。🕘 09:00–18:00（入場至 17:40），連中無休。💰 成人 2,000 韓元、青少年/兒童 1,000 韓元，現場購票即可，免預約"
       },
       {
         type: "card",
@@ -207,7 +349,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/P2VPUodHkzsWRQw27", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/58NXx4jC", type: "naver" }
         ],
-        note: "亞洲唯一入海瀑布，09:00–18:00，票 2,000 韓元，連中無休，下坡步道約10分鐘"
+        note: "亞洲唯一直接傾瀉入海的瀑布，高約23公尺，水流自懸崖奔落大海蔚為壯觀，被列為韓國名勝。🕘 09:00–18:00，連中無休。💰 成人 2,000 韓元、青少年/兒童 1,000 韓元，現場購票即可。需走下坡石階步道約10分鐘，建議穿好走的鞋"
       },
       {
         type: "label",
@@ -315,7 +457,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/xiquOGa4", type: "naver" }
         ],
-        note: "韓國最大水族館，全天室內，票約33,000韓元"
+        note: "韓國最大、亞洲頂級的海洋水族館，擁有巨型主缸與海女實境表演，飼育鯊魚、魟魚等逾500種海洋生物，全程室內為絕佳雨備景點。💰 成人約 33,000 韓元、兒童約 31,000 韓元。🎫 Klook、KKday 線上購票約 25,000–27,000 韓元（約75–8折），比現場划算，建議先網路購票"
       },
       {
         type: "card",
@@ -327,7 +469,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%95%84%EB%A5%B4%EB%96%BC%EB%AE%A4%EC%A7%80%EC%97%84%20%EC%A0%9C%EC%A3%BC", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/GSDAiZ5B", type: "naver" }
         ],
-        note: "沉浸式數位藝術展，全室內，票約18,000韓元，位於愛月邑西部"
+        note: "由韓國知名團隊d'strict打造的沉浸式數位媒體藝術展，以光影、音樂結合超大投影營造夢幻空間，是濟州最熱門的室內打卡景點，雨天首選。💰 成人約 18,000 韓元、青少年約 13,000 韓元、兒童約 10,000 韓元。🎫 Klook、KKday 線上購票約 15,000 韓元（約85折），位於愛月邑西部"
       }
     ]
   },
@@ -358,7 +500,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%82%B0%EC%9D%BC%EC%B6%9C%EB%B4%89", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/xa5Rn5U3", type: "naver" }
         ],
-        note: "UNESCO世遺！夏季 05:30–20:00（含日出前），票 5,000 韓元，連中無休，山頂俯瞰絕佳，下山後停車場有烤魚糕攤"
+        note: "UNESCO世界自然遺產！由海底火山噴發形成的巨型火山口，碗狀火口被99座岩峰環繞，登頂俯瞰東部海岸與日出絕美，是濟州必訪地標。🕘 夏季 05:30–20:00（含日出前入場），連中無休。💰 成人 5,000 韓元、青少年/兒童 2,500 韓元，現場購票即可。登頂步道約20–30分鐘，下山後停車場有海女現烤海鮮攤"
       },
       {
         type: "label",
@@ -387,7 +529,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/JDTzrDfBRirtNn5g9", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/FbONgQz0", type: "naver" }
         ],
-        note: "韓劇《我叫金三順》取景地，燈塔+懸崖+草地，開車入場免費，繞一圈約40分鐘"
+        note: "突出於東部海岸的美麗海角，擁有遼闊草地、紅色燈塔與玄武岩懸崖，韓劇《我叫金三順》取景地，安藤忠雄設計的Glass House與Genius Loci亦座落於此。🚗 開車入園免費，停車費約 1,000–2,000 韓元，繞行步道一圈約40分鐘"
       },
       {
         type: "card",
@@ -433,7 +575,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%82%B0%ED%95%AD%20%EC%A2%85%ED%95%A9%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90", type: "google" },
           { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%84%B1%EC%82%B0%ED%95%AD%20%EC%A2%85%ED%95%A9%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90", type: "naver" }
         ],
-        note: "城山港搭船約10分鐘！花生冰淇淋超有名，電動車環島超療癒，建議安排2-3小時"
+        note: "搭船從城山港出發僅約10分鐘即可抵達的離島，花生田、白沙灘與燈塔風光療癒，花生冰淇淋是必嚐名物，租電動車或觀光車環島最愜意。💰 來回渡輪票成人約 10,500 韓元（含登島環境費），電動車租借約 3–4 萬韓元起。🎫 渡輪現場購票即可，需攜帶護照登記，建議安排2–3小時"
       },
       {
         type: "label",
@@ -488,7 +630,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/xiquOGa4", type: "naver" }
         ],
-        note: "城山旁，即時轉場，全天室內"
+        note: "城山旁，即時轉場、全程室內。韓國最大海洋水族館，海女表演與大型海洋生物展示為亮點。💰 成人約 33,000 韓元，🎫 線上購票約 25,000–27,000 韓元更划算"
       }
     ]
   },
@@ -519,7 +661,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%ED%95%A8%EB%8D%95%ED%95%B4%EC%88%98%EC%9A%95%EC%9E%A5", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/xBwJypFt", type: "naver" }
         ],
-        note: "翡翠色透明淺水，夏日戲水首選，有停車場，週末建議早到"
+        note: "濟州東北部最美海灘之一，翡翠綠透明淺水搭配白沙與背後的犀牛峰，水淺平緩適合戲水與親子同遊，旁邊就是知名海景咖啡廳。免費入場，設有免費停車場，夏日與週末建議早到佔位"
       },
       {
         type: "card",
@@ -577,7 +719,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EB%A7%8C%EC%9E%A5%EA%B5%B4", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/xTTF0mnY", type: "naver" }
         ],
-        note: "全球最長熔岩洞穴之一，09:00–18:00（售票至17:00），恆溫11°C，帶薄外套，票 2,000 韓元"
+        note: "全球最長的熔岩洞穴之一，開放參觀約1公里，洞內可見全世界最高的熔岩石柱（約7.6公尺），列為UNESCO世界自然遺產。🕘 09:00–18:00（售票至17:00），每月第一個週三公休（建議出發前確認）。💰 成人 2,000 韓元、青少年/兒童 1,000 韓元，現場購票即可。洞內恆溫約11°C且濕滑，務必帶薄外套、穿好走防滑鞋"
       },
       {
         type: "label",
@@ -606,7 +748,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/Cg5UMVwhJbC4d36v5", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/5XJIlPtO", type: "naver" }
         ],
-        note: "濟州最美白沙灘！碧藍清澈，可遠眺飛揚島，下午光線最美（若時間充裕才去）"
+        note: "濟州西部最美白沙灘，乳白色貝殼沙與碧藍漸層海水形成絕美對比，正對外海的飛揚島（비양도），是拍照與夕陽的人氣地點。免費入場，設有停車場，下午光線最美（若時間充裕才去）"
       },
       {
         type: "label",
@@ -677,7 +819,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/GMmgqDjq", type: "naver" }
         ],
-        note: "蒸汽小火車穿梭森林，輕微小雨仍可玩，替代海灘"
+        note: "以復古蒸汽小火車穿梭於곶자왈原始森林與湖泊間的主題樂園，分多站可下車漫步賞景，親子情侶皆宜，輕微小雨仍可玩、可替代海灘。💰 成人約 16,000 韓元、青少年約 13,000 韓元、兒童約 11,000 韓元。🎫 Klook、KKday 線上購票常有折扣（約 13,000–14,000 韓元）"
       },
       {
         type: "card",
@@ -689,7 +831,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EB%B9%9B%EC%9D%98%EB%B2%99%EC%BB%A4%20%EC%A0%9C%EC%A3%BC", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/xcnaMIV3", type: "naver" }
         ],
-        note: "全室內沉浸式光影展，雨天最佳選擇，票約15,000韓元，位於東部비자림路上"
+        note: "利用前國家通訊密碼地下碉堡改造的沉浸式光影藝術展館，以大型投影將世界名畫鋪滿牆面與地板並配上音樂，全室內為雨天最佳選擇。💰 成人約 18,000 韓元、青少年約 13,000 韓元、兒童約 10,000 韓元。🎫 Klook、KKday 線上購票約 15,000 韓元更划算，位於東部비자림路上"
       },
       ]
   },
@@ -716,7 +858,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%A0%9C%EC%A3%BC%EB%AA%A9%EA%B4%80%EC%95%84", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/xucpi9hW", type: "naver" }
         ],
-        note: "朝鮮時代地方官府，09:00–18:00（入場 17:30），票 1,500 韓元，連中無休，距東門市場步行5分鐘"
+        note: "朝鮮時代濟州地方行政的官府所在，經考古復原重現觀德亭、望京樓等傳統韓式建築群，可了解濟州歷史並穿韓服拍照，位於市區交通便利。🕘 09:00–18:00（入場至17:30），連中無休。💰 成人 1,500 韓元、青少年/兒童 800 韓元，現場購票即可，距東門市場步行約5分鐘"
       },
       {
         type: "label",
@@ -750,7 +892,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/X8HsNmCtnfP6qE2UA", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/FIfsxK2w", type: "naver" }
         ],
-        note: "Olive Young 韓妝保養、服飾店集中，回台前採購伴手禮最佳時機"
+        note: "濟州市區最熱鬧的購物商圈，Olive Young韓妝保養、流行服飾、美食餐廳與咖啡廳林立，是回台前採購伴手禮與藥妝的最佳地點。免費逛街，夜晚更熱鬧"
       },
       {
         type: "label",
@@ -834,7 +976,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/m9ws6riMCodtdu7a8", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/x1VvFJCI", type: "naver" }
         ],
-        note: "廚房打擊秀，不需韓語，需提前網路預購票"
+        note: "韓國最具代表性的無對白默劇，以廚房鍋碗瓢盆敲打出節奏感十足的打擊樂，融合特技與觀眾互動，不需懂韓語也能盡情享受，全室內適合雨天。💰 票價約 40,000–60,000 韓元（依座位分區）。🎫 Klook、KKday 或官網線上預購較便宜且保留座位，建議提前訂票"
       }
     ]
   },
@@ -987,7 +1129,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%82%B0%ED%95%AD%20%EC%A2%85%ED%95%A9%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90", type: "google" },
           { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%84%B1%EC%82%B0%ED%95%AD%20%EC%A2%85%ED%95%A9%EC%97%AC%EA%B0%9D%ED%84%B0%EB%AF%B8%EB%84%90", type: "naver" }
         ],
-        note: "🌟強烈推薦！城山港搭船10分鐘，花生冰淇淋超有名，租電動車環島，可接Day2城山後半天"
+        note: "🌟強烈推薦！搭船從城山港出發僅約10分鐘的離島，花生田、白沙灘與燈塔風光療癒，花生冰淇淋必嚐，租電動車環島最愜意。💰 來回渡輪票成人約 10,500 韓元（含環境費），電動車租借約 3–4 萬韓元起。🎫 渡輪現場購票需帶護照登記，可接Day2城山後半天，建議2–3小時"
       },
       {
         type: "card",
@@ -999,7 +1141,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%9B%94%EC%A0%95%EB%A6%AC%ED%95%B4%EB%B3%80", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/G1wS0VUO", type: "naver" }
         ],
-        note: "IG打卡必訪！彩色椅子＋淺藍海水，傍晚最美，可加入Day3咸德路線"
+        note: "IG打卡名所！沿岸排列彩色咖啡椅，搭配淺藍漸層海水與遠方風車，畫面清新夢幻，傍晚與夕陽時最美，海岸咖啡廳林立。免費入場，可順遊加入Day3咸德、萬丈窟東部路線"
       },
       {
         type: "card",
@@ -1011,7 +1153,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%9A%A9%EB%91%90%EC%95%94", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/IDFUMguf", type: "naver" }
         ],
-        note: "免費！玄武岩奇石形似龍頭，濟州市區步行可達，適合Day4還車後快速參觀"
+        note: "由海岸熔岩經海浪與風長年侵蝕形成的奇岩，外型宛如昂首向天的龍頭，是濟州市區著名地標，夜間打燈別具氛圍。免費參觀，距濟州市區與機場近，適合Day4還車後快速順遊"
       },
       {
         type: "card",
@@ -1023,7 +1165,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/UkrP1tcvGXrqkFX4A", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/GG7tHhe5", type: "naver" }
         ],
-        note: "韓國最高峰，需官網預約，全程5-9小時，體力充裕者可考慮Day3清晨安排"
+        note: "韓國最高峰（海拔1,947公尺），列為UNESCO世界自然遺產，山頂白鹿潭火口湖景色壯麗。성판악、관음사等主要登山路線往返需5–9小時。攻頂路線須事先於官網預約（免費入山），需備足體力、糧食與裝備，體力充裕者可考慮清晨安排"
       },
       {
         type: "card",
@@ -1035,7 +1177,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%8A%A4%EB%88%84%ED%94%BC%EA%B0%80%EB%93%A0%20%EC%A0%9C%EC%A3%BC", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/502MzmiO", type: "naver" }
         ],
-        note: "超可愛史努比主題公園，打卡超出片，可排入Day3東部路線"
+        note: "以《花生漫畫》史努比為主題的大型庭園，分為室內展館與戶外五大主題花園，造景可愛、處處是打卡點，親子情侶皆宜。💰 成人約 18,000 韓元、青少年約 15,000 韓元、兒童約 12,000 韓元。🎫 Klook、KKday 線上購票約 15,000 韓元更划算，可排入Day3東部路線"
       },
       {
         type: "card",
@@ -1047,7 +1189,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%97%90%EC%BD%94%EB%9E%9C%EB%93%9C%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC", type: "google" },
           { text: "🟢 Naver Map", href: "https://naver.me/GMmgqDjq", type: "naver" }
         ],
-        note: "復古蒸汽小火車穿梭森林湖泊，親子情侶皆宜，可排入Day3咸德路線附近"
+        note: "以復古蒸汽小火車穿梭곶자왈原始森林與湖泊間的主題樂園，分多站可下車漫步賞景，親子情侶皆宜。💰 成人約 16,000 韓元、青少年約 13,000 韓元、兒童約 11,000 韓元。🎫 Klook、KKday 線上購票常有折扣（約 13,000–14,000 韓元），可排入Day3咸德路線附近"
       },
       {
         type: "card",
