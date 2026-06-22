@@ -5,8 +5,8 @@ export const tripInfo = {
   title: "🏝 濟州島 5天4夜自駕遊",
   subtitle: "2026年 6/23（二）出發 ～ 6/27（六）返台　✦　樂天租車4天",
   chips: [
-    { icon: "✈️", label: "去程", value: "IT278 桃園06:40→濟州09:35" },
-    { icon: "✈️", label: "回程", value: "IT279 濟州10:30→桃園11:35" },
+    { icon: "✈️", label: "去程", value: "IT654 桃園06:40→濟州09:35" },
+    { icon: "✈️", label: "回程", value: "IT655 濟州10:30→桃園11:35" },
     { icon: "🚗", label: "租車", value: "樂天租車 6/23取 6/26晚還" },
     { icon: "🏨", label: "住宿", value: "西歸浦2夜 / 樂天城市2夜" },
   ]
@@ -27,13 +27,13 @@ export const days = {
   "day-1": {
     id: "day-1",
     title: "6/23(二）提醒",
-    subtitle: "虎航 IT278　桃園 06:40 → 濟州 09:35",
+    subtitle: "虎航 IT654　桃園 06:40 → 濟州 09:35",
     headerGradient: "from-blue-900 to-blue-600",
     emoji: "✈️",
     sections: [
       {
         type: "flight",
-        airline: "🛫 虎航 Tigerair IT278",
+        airline: "🛫 虎航 Tigerair IT654",
         from: { code: "TPE", name: "桃園國際機場", time: "06:40" },
         to: { code: "CJU", name: "濟州國際機場", time: "09:35" },
         duration: "約 1h 55m"
@@ -83,7 +83,7 @@ export const days = {
           { time: "04:45", desc: "辦理報到 Check-in、托運行李" },
           { time: "05:15", desc: "通關安檢、出境" },
           { time: "05:30", desc: "候機室等待，可買早餐" },
-          { time: "06:40", desc: "✈️ IT278 起飛！", highlight: true },
+          { time: "06:40", desc: "✈️ IT655 起飛！", highlight: true },
           { time: "09:35", desc: "濟州機場落地" },
           { time: "10:00", desc: "通關、提領行李、前往樂天租車" },
           { time: "10:30", desc: "取車完成！前往 EGG DROP 吃早餐 🍳" }
@@ -226,7 +226,7 @@ export const days = {
         title: "卡薩洛瑪飯店 Casaloma Hotel（前2夜）",
         location: "서귀포시 서홍동 546",
         links: [
-          { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/VqMhENNWPzjKmJAP6", type: "google" },
+          { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/DYgb6GZWGgyZbtY37", type: "google" },
           { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%B9%B4%EC%82%AC%EB%A1%9C%EB%A7%88%ED%98%B8%ED%85%94%20%EC%84%9C%EA%B7%80%ED%8F%AC", type: "naver" }
         ],
         note: "Check-in後步行約10分鐘至每日偶來市場"
@@ -424,7 +424,7 @@ export const days = {
         title: "卡薩洛瑪飯店 Casaloma Hotel（第2夜）",
         location: "서귀포시 서홍동 546",
         links: [
-          { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/VqMhENNWPzjKmJAP6", type: "google" },
+          { text: "🗺 Google Maps", href: "https://maps.app.goo.gl/DYgb6GZWGgyZbtY37", type: "google" },
           { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%B9%B4%EC%82%AC%EB%A1%9C%EB%A7%88%ED%98%B8%ED%85%94%20%EC%84%9C%EA%B7%80%ED%8F%AC", type: "naver" }
         ],
         note: "醬蟹吃完驅車回西歸浦住宿，明日清晨05:30出發去城山，建議早點休息"
@@ -873,7 +873,7 @@ export const days = {
           { text: "🗺 Google Maps", href: "https://www.google.com/maps/search/?api=1&query=%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD", type: "google" },
           { text: "🟢 Naver Map", href: "https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD", type: "naver" }
         ],
-        note: "酒店接駁車→報到托運→安檢→10:30 IT279起飛→11:35桃園抵達"
+        note: "酒店接駁車→報到托運→安檢→10:30 IT655起飛→11:35桃園抵達"
       }
     ]
   },
@@ -881,7 +881,7 @@ export const days = {
   "day6": {
     id: "day6",
     title: "6/27（六）提醒",
-    subtitle: "虎航 IT279　濟州 10:30 → 桃園 11:35",
+    subtitle: "虎航 IT655　濟州 10:30 → 桃園 11:35",
     headerGradient: "from-blue-900 to-blue-600",
     emoji: "✈️",
     sections: [
@@ -899,7 +899,7 @@ export const days = {
           { time: "08:30", desc: "抵達機場，辦理報到、托運行李" },
           { time: "09:00", desc: "通關安檢 → 前往候機室" },
           { time: "09:30", desc: "候機室逛免稅店、吃早餐" },
-          { time: "10:30", desc: "✈️ IT279 起飛！", highlight: true },
+          { time: "10:30", desc: "✈️ IT655 起飛！", highlight: true },
           { time: "11:35", desc: "桃園 T2 落地，提領行李，回家 🏠" }
         ]
       },
